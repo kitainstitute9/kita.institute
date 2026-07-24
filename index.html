@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>КИТА — Казахстанский Институт Транзактного Анализа</title>
+    <link rel="icon" type="image/webp" href="sticker (4).webp">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,6 +48,11 @@
         @keyframes flyIn { from { transform: translateY(30px) scale(0.95); opacity: 0; } to { transform: translateY(0) scale(1); opacity: 1; } }
         .script-out { animation: flyOut 0.3s forwards ease-in; }
         .script-in { animation: flyIn 0.3s forwards ease-out; }
+        
+        /* 3D Book Hover Effect */
+        #books-view .glass-panel { perspective: 1000px; }
+        #books-view .glass-panel img { transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1); transform-style: preserve-3d; transform-origin: left center; }
+        #books-view .glass-panel:hover img { transform: scale(1.05) rotateY(-15deg) rotateX(2deg); filter: drop-shadow(15px 15px 15px rgba(0,0,0,0.5)) drop-shadow(-5px 5px 15px rgba(179,106,40,0.3)); }
     </style>
 
     <!-- Meta Pixel Code -->
@@ -151,7 +157,7 @@
                         </div>
                     </div>
                     <div class="relative group h-full flex items-center"><a href="#" onclick="showPage('psychologta-view'); return false;" class="text-base text-paper hover:text-copper-bright transition-colors font-medium flex items-center">ПсихологТА</a></div>
-                    <div class="relative group h-full flex items-center"><a href="#" onclick="showPage('books-view'); return false;" class="relative text-base text-paper hover:text-copper-bright transition-colors font-medium flex items-center"><span class="absolute -top-4 -right-4 text-[#c22941] drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] font-handwriting text-base rotate-[-12deg] pointer-events-none select-none">Скоро</span>Книги</a></div>
+                    <div class="relative group h-full flex items-center"><a href="#" onclick="showPage('books-view'); return false;" class="relative text-base text-paper hover:text-copper-bright transition-colors font-medium flex items-center">Книги</a></div>
                 </nav>
 
                 <div class="hidden lg:flex items-center space-x-4 shrink-0 relative z-10">
@@ -226,10 +232,10 @@
                     <div class="lg:w-1/2 mt-16 lg:mt-0 relative">
                         <div class="photo-frame relative p-2 transform rotate-2">
                              <img data-img="berne" alt="Эрик Берн" class="ink-print-effect grayscale-[0.3] hover:grayscale-0 transition-all duration-700 w-full h-auto max-h-[500px] object-cover" />
-                             <p class="absolute -bottom-14 right-8 font-handwriting text-4xl text-copper-bright z-10">Э. Берн</p>
-                             <div class="absolute -bottom-12 md:-left-12 left-4 right-4 md:right-auto bg-navy/95 border border-copper/30 p-5 shadow-[0_15px_30px_rgba(0,0,0,0.5)] max-w-sm backdrop-blur-md z-20 transform -rotate-1 rounded-sm">
+                             <div class="absolute -bottom-12 md:-left-12 left-4 right-4 md:right-auto bg-navy/95 border border-copper/30 p-5 pb-10 md:pb-10 shadow-[0_15px_30px_rgba(0,0,0,0.5)] max-w-sm backdrop-blur-md z-20 transform -rotate-1 rounded-sm">
                                  <i data-lucide="quote" class="text-copper h-5 w-5 mb-2 opacity-70"></i>
                                  <div class="min-h-[100px] flex items-center"><p id="hero-quote-text" class="text-paper-light text-sm md:text-base italic font-light transition-opacity duration-500 ease-in-out leading-relaxed">Загрузка мудрости...</p></div>
+                                 <p class="absolute bottom-2 right-4 font-handwriting text-3xl md:text-4xl text-copper-bright z-30">Э. Берн</p>
                              </div>
                         </div>
                     </div>
@@ -389,13 +395,183 @@
             </div>
         </div>
 
-        <div id="books-view" style="display: none;" class="py-12 fade-in">
-            <div class="max-w-5xl mx-auto px-4 relative z-10 text-center">
-                <div class="inline-block px-6 py-2 rounded-full bg-copper/20 text-copper-bright text-sm font-bold tracking-widest uppercase mb-6 border border-copper/30 shadow-md">Скоро</div>
-                <h2 class="text-4xl md:text-6xl font-bold text-copper-bright mb-6">Библиотека</h2>
+        <div id="books-view" style="display: none;" class="py-12 fade-in relative overflow-hidden">
+            <!-- Background Logo -->
+            <img data-img="logo" class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[120%] md:w-[80%] max-w-4xl opacity-[0.03] grayscale mix-blend-screen pointer-events-none z-0" alt="KITA Background">
+            
+            <div class="max-w-7xl mx-auto px-4 relative z-10">
+                <h2 class="text-4xl md:text-6xl font-bold text-copper-bright mb-6 text-center">Библиотека</h2>
                 <div class="w-32 h-1 bg-copper/30 mx-auto mb-12"></div>
-                <div class="glass-panel p-10 rounded-sm border border-copper/30 shadow-2xl"><i data-lucide="book-open" class="text-copper h-12 w-12 mx-auto mb-6"></i><p class="text-xl text-paper/80 font-light mb-6">Библиотека формируется.</p><p class="text-paper">Вскоре здесь появятся ключевые книги и материалы по Транзактному Анализу.</p></div>
-                <div class="mt-16 text-center"><button onclick="showPage('home-view')" class="px-10 py-4 border border-copper text-copper-bright hover:bg-copper/10 rounded-full transition-all shadow-lg"><i data-lucide="arrow-left" class="mr-2"></i> Вернуться на главную</button></div>
+                <p class="text-xl text-paper/90 font-light max-w-3xl mx-auto text-center mb-16">Книги по Транзактному Анализу.</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Book 1 -->
+                    <div class="glass-panel p-8 rounded-sm border-l-4 border-copper flex flex-col hover:border-copper-bright transition-colors shadow-lg">
+                        <img src="krisiansen.jpg.png" alt="Транзактный анализ в бизнесе" class="w-full h-auto mb-6 rounded-sm shadow-md object-contain max-h-64">
+                        <div class="flex items-center gap-4 mb-4">
+                            <i data-lucide="book" class="h-8 w-8 text-copper shrink-0"></i>
+                            <h3 class="text-xl font-bold text-paper leading-tight">Транзактный анализ в бизнесе</h3>
+                        </div>
+                        <p class="text-copper-bright text-sm uppercase tracking-widest font-bold mb-4">Коре Кристиансен, Пия Билунд</p>
+                        <p class="text-paper/90 font-light text-lg leading-relaxed flex-grow">В книге представлены основы транзактного анализа (ТА) и его применение в организационной среде. Отличный инструмент для лидерства и коммуникации.</p>
+                    </div>
+
+                    <!-- Book 2 -->
+                    <div class="glass-panel p-8 rounded-sm border-l-4 border-copper flex flex-col hover:border-copper-bright transition-colors shadow-lg">
+                        <img src="makarov.jpg.png" alt="Транзактный анализ – восточная версия" class="w-full h-auto mb-6 rounded-sm shadow-md object-contain max-h-64">
+                        <div class="flex items-center gap-4 mb-4">
+                            <i data-lucide="book" class="h-8 w-8 text-copper shrink-0"></i>
+                            <h3 class="text-xl font-bold text-paper leading-tight">Транзактный анализ – восточная версия</h3>
+                        </div>
+                        <p class="text-copper-bright text-sm uppercase tracking-widest font-bold mb-4">Виктор Макаров, Галина Макарова</p>
+                        <p class="text-paper/90 font-light text-lg leading-relaxed flex-grow">Адаптация классического транзактного анализа с учетом особенностей менталитета нашего пространства. Практическое руководство.</p>
+                    </div>
+
+                    <!-- Book 3 -->
+                    <div class="glass-panel p-8 rounded-sm border-l-4 border-copper flex flex-col hover:border-copper-bright transition-colors shadow-lg">
+                        <img src="1783698705.png" alt="Транзактный анализ: 100 ключевых понятий" class="w-full h-auto mb-6 rounded-sm shadow-md object-contain max-h-64">
+                        <div class="flex items-center gap-4 mb-4">
+                            <i data-lucide="book" class="h-8 w-8 text-copper shrink-0"></i>
+                            <h3 class="text-xl font-bold text-paper leading-tight">Транзактный анализ: 100 ключевых понятий</h3>
+                        </div>
+                        <p class="text-copper-bright text-sm uppercase tracking-widest font-bold mb-4">Марк Виддоусон</p>
+                        <p class="text-paper/90 font-light text-lg leading-relaxed flex-grow">Удобный справочник, предлагающий ясный и структурированный обзор основных концепций и методов транзактного анализа.</p>
+                    </div>
+
+                    <!-- Book 4 -->
+                    <div class="glass-panel p-8 rounded-sm border-l-4 border-copper flex flex-col hover:border-copper-bright transition-colors shadow-lg">
+                        <img src="shtainer.jpg.png" alt="Прощание с Карнеги" class="w-full h-auto mb-6 rounded-sm shadow-md object-contain max-h-64">
+                        <div class="flex items-center gap-4 mb-4">
+                            <i data-lucide="book" class="h-8 w-8 text-copper shrink-0"></i>
+                            <h3 class="text-xl font-bold text-paper leading-tight">Прощание с Карнеги</h3>
+                        </div>
+                        <p class="text-copper-bright text-sm uppercase tracking-widest font-bold mb-4">Клод Штайнер</p>
+                        <p class="text-paper/90 font-light text-lg leading-relaxed flex-grow">Научный бестселлер, исследующий игры, в которые играют люди ради власти и контроля, и предлагающий пути освобождения.</p>
+                    </div>
+
+                    <!-- Book 5 -->
+                    <div class="glass-panel p-8 rounded-sm border-l-4 border-copper flex flex-col hover:border-copper-bright transition-colors shadow-lg">
+                        <img src="gregori.jpg.png" alt="Три пути к автономии и самоактуализации" class="w-full h-auto mb-6 rounded-sm shadow-md object-contain max-h-64">
+                        <div class="flex items-center gap-4 mb-4">
+                            <i data-lucide="book" class="h-8 w-8 text-copper shrink-0"></i>
+                            <h3 class="text-xl font-bold text-paper leading-tight">Три пути к автономии и самоактуализации</h3>
+                        </div>
+                        <p class="text-copper-bright text-sm uppercase tracking-widest font-bold mb-4">Линда Грегори</p>
+                        <p class="text-paper/90 font-light text-lg leading-relaxed flex-grow">В книге исследуются приобретённые и унаследованные системы убеждений и то, как они мешают достигать глубин сознания, мечтаний и целей. Автор предлагает рассматривать духовность как глубокую личную связь с самим собой, высшим сознанием и всеобщим квантовым полем.</p>
+                    </div>
+
+                    <!-- Book 6 -->
+                    <div class="glass-panel p-8 rounded-sm border-l-4 border-copper flex flex-col hover:border-copper-bright transition-colors shadow-lg">
+                        <img src="1784032064.png" alt="Жизнь свободная от игр" class="w-full h-auto mb-6 rounded-sm shadow-md object-contain max-h-64">
+                        <div class="flex items-center gap-4 mb-4">
+                            <i data-lucide="book" class="h-8 w-8 text-copper shrink-0"></i>
+                            <h3 class="text-xl font-bold text-paper leading-tight">Жизнь свободная от игр</h3>
+                        </div>
+                        <p class="text-copper-bright text-sm uppercase tracking-widest font-bold mb-4">Стивен Карпман</p>
+                        <p class="text-paper/90 font-light text-lg leading-relaxed flex-grow">В издании автор описывает разновидности треугольников и игр, которые регулярно затевают люди, и даёт советы, как осознать эти игры и выйти из них. Книга посвящена секретам, инструментам и эффективным способам, которые помогают стать открытым, близким и счастливым.</p>
+                    </div>
+
+                    <!-- Book 7 -->
+                    <div class="glass-panel p-8 rounded-sm border-l-4 border-copper flex flex-col hover:border-copper-bright transition-colors shadow-lg">
+                        <img src="1784032827.png" alt="Рабочая тетрадь при депрессии и стыде" class="w-full h-auto mb-6 rounded-sm shadow-md object-contain max-h-64">
+                        <div class="flex items-center gap-4 mb-4">
+                            <i data-lucide="book" class="h-8 w-8 text-copper shrink-0"></i>
+                            <h3 class="text-xl font-bold text-paper leading-tight">Рабочая тетрадь при депрессии и стыде</h3>
+                        </div>
+                        <p class="text-copper-bright text-sm uppercase tracking-widest font-bold mb-4">Мэтью Маккей, Майкл Джейсон Гринберг, Патрик Фаннинг</p>
+                        <p class="text-paper/90 font-light text-lg leading-relaxed flex-grow">В тетради представлены: упражнения для развития осознанности; задания, которые помогут начать по-новому воспринимать мысли о собственной несостоятельности; метод эмоциональной экспозиции, позволяющий не вытеснять неприятные чувства, а перерабатывать их.</p>
+                    </div>
+
+                    <!-- Book 8 -->
+                    <div class="glass-panel p-8 rounded-sm border-l-4 border-copper flex flex-col hover:border-copper-bright transition-colors shadow-lg">
+                        <img src="1784033830.png" alt="Индивидуальный и организационный ТА в 21 веке" class="w-full h-auto mb-6 rounded-sm shadow-md object-contain max-h-64">
+                        <div class="flex items-center gap-4 mb-4">
+                            <i data-lucide="book" class="h-8 w-8 text-copper shrink-0"></i>
+                            <h3 class="text-xl font-bold text-paper leading-tight">Индивидуальный и организационный ТА в 21 веке</h3>
+                        </div>
+                        <p class="text-copper-bright text-sm uppercase tracking-widest font-bold mb-4">Гюнтер Мор</p>
+                        <p class="text-paper/90 font-light text-lg leading-relaxed flex-grow">Книга, в которой представлены актуальные концепции и идеи, касающиеся основных перспектив Транзактного Анализа и его практического применения в индивидуальном и организационном консультировании.</p>
+                    </div>
+
+                    <!-- Book 9 -->
+                    <div class="glass-panel p-8 rounded-sm border-l-4 border-copper flex flex-col hover:border-copper-bright transition-colors shadow-lg">
+                        <img src="1784039616.png" alt="Твой стиль лидерства и профессиональная идентичность" class="w-full h-auto mb-6 rounded-sm shadow-md object-contain max-h-64">
+                        <div class="flex items-center gap-4 mb-4">
+                            <i data-lucide="book" class="h-8 w-8 text-copper shrink-0"></i>
+                            <h3 class="text-xl font-bold text-paper leading-tight">Твой стиль лидерства и профессиональная идентичность</h3>
+                        </div>
+                        <p class="text-copper-bright text-sm uppercase tracking-widest font-bold mb-4">Аннэ де Грааф, Клаас Кунст</p>
+                        <p class="text-paper/90 font-light text-lg leading-relaxed flex-grow">В книге исследуются основные тенденции, связанные с современным понятием лидерства, и размышляется над тем, что делает человека успешным и эффективным менеджером.</p>
+                    </div>
+
+                    <!-- Book 10 -->
+                    <div class="glass-panel p-8 rounded-sm border-l-4 border-copper flex flex-col hover:border-copper-bright transition-colors shadow-lg">
+                        <img src="1784040180.png" alt="Терапия перерешения сегодня: подход отношенческого перерешения в ТА" class="w-full h-auto mb-6 rounded-sm shadow-md object-contain max-h-64">
+                        <div class="flex items-center gap-4 mb-4">
+                            <i data-lucide="book" class="h-8 w-8 text-copper shrink-0"></i>
+                            <h3 class="text-xl font-bold text-paper leading-tight">Терапия перерешения сегодня: подход отношенческого перерешения в ТА</h3>
+                        </div>
+                        <p class="text-copper-bright text-sm uppercase tracking-widest font-bold mb-4">Тони Вайт</p>
+                        <p class="text-paper/90 font-light text-lg leading-relaxed flex-grow">Книга посвящена психотерапевтическому подходу транзактного анализа. В ней рассматриваются две из развившихся в рамках этого подхода школ - школа Перерешения и Отношенческая школа, а также возможности их объединения.</p>
+                    </div>
+
+                    <!-- Book 11 -->
+                    <div class="glass-panel p-8 rounded-sm border-l-4 border-copper flex flex-col hover:border-copper-bright transition-colors shadow-lg">
+                        <img src="1784041589.png" alt="Транзактный анализ для тренеров" class="w-full h-auto mb-6 rounded-sm shadow-md object-contain max-h-64">
+                        <div class="flex items-center gap-4 mb-4">
+                            <i data-lucide="book" class="h-8 w-8 text-copper shrink-0"></i>
+                            <h3 class="text-xl font-bold text-paper leading-tight">Транзактный анализ для тренеров</h3>
+                        </div>
+                        <p class="text-copper-bright text-sm uppercase tracking-widest font-bold mb-4">Джули Хей</p>
+                        <p class="text-paper/90 font-light text-lg leading-relaxed flex-grow">Книга многофункциональна. Это и новый взгляд на теорию транзактного анализа, и методическое пособие для проведения тренингов и обучающих групп с использованием этого метода, и структурированный гид для личностного роста и профессионального развития тренера.</p>
+                    </div>
+
+                    <!-- Book 12 -->
+                    <div class="glass-panel p-8 rounded-sm border-l-4 border-copper flex flex-col hover:border-copper-bright transition-colors shadow-lg">
+                        <img src="1784042167.png" alt="INTO TA. Погружение в Транзактный Анализ" class="w-full h-auto mb-6 rounded-sm shadow-md object-contain max-h-64">
+                        <div class="flex items-center gap-4 mb-4">
+                            <i data-lucide="book" class="h-8 w-8 text-copper shrink-0"></i>
+                            <h3 class="text-xl font-bold text-paper leading-tight">INTO TA. Погружение в Транзактный Анализ</h3>
+                        </div>
+                        <p class="text-copper-bright text-sm uppercase tracking-widest font-bold mb-4">под ред. У. Корнелл, А. Грааф, Т. Ньютон, М. Туннисен</p>
+                        <p class="text-paper/90 font-light text-lg leading-relaxed flex-grow">Перед вами объемный и комплексный учебник по современному ТА в теории и на практике. Авторы представили теорию таким образом, чтобы как начинающие, так и опытные читатели, смогли создать свое видение ТА.</p>
+                    </div>
+
+                    <!-- Book 13 -->
+                    <div class="glass-panel p-8 rounded-sm border-l-4 border-copper flex flex-col hover:border-copper-bright transition-colors shadow-lg">
+                        <img src="1784054423.png" alt="ТА для всех (рабочая тетрадь)" class="w-full h-auto mb-6 rounded-sm shadow-md object-contain max-h-64">
+                        <div class="flex items-center gap-4 mb-4">
+                            <i data-lucide="book" class="h-8 w-8 text-copper shrink-0"></i>
+                            <h3 class="text-xl font-bold text-paper leading-tight">ТА для всех (рабочая тетрадь)</h3>
+                        </div>
+                        <p class="text-copper-bright text-sm uppercase tracking-widest font-bold mb-4">Соболева Е.С. и Сахно С.Г.</p>
+                        <p class="text-paper/90 font-light text-lg leading-relaxed flex-grow">В данном руководстве Вы найдете полное собрание всех основополагающих концепций ТА с указанием оригинальных авторов и годом появления концепции, что может значительно облегчить написание экзаменационной работы на звание СТА.</p>
+                    </div>
+
+                    <!-- Book 14 -->
+                    <div class="glass-panel p-8 rounded-sm border-l-4 border-copper flex flex-col hover:border-copper-bright transition-colors shadow-lg">
+                        <img src="1784055004.png" alt="Запрещающие послания: Диагностика, терапия, процесс перерешения" class="w-full h-auto mb-6 rounded-sm shadow-md object-contain max-h-64">
+                        <div class="flex items-center gap-4 mb-4">
+                            <i data-lucide="book" class="h-8 w-8 text-copper shrink-0"></i>
+                            <h3 class="text-xl font-bold text-paper leading-tight">Запрещающие послания: Диагностика, терапия, процесс перерешения</h3>
+                        </div>
+                        <p class="text-copper-bright text-sm uppercase tracking-widest font-bold mb-4">Джон Р. Макнил</p>
+                        <p class="text-paper/90 font-light text-lg leading-relaxed flex-grow">Методическое пособие в методе Транзактного анализа. Оно включает обзор развития автором новой теории и концепции Запрещающих посланий в Школе Перерешения, практический и теоретический материал.</p>
+                    </div>
+
+                    <!-- Book 15 -->
+                    <div class="glass-panel p-8 rounded-sm border-l-4 border-copper flex flex-col hover:border-copper-bright transition-colors shadow-lg">
+                        <img src="1784055733.png" alt="Техника Пустого стула как механизм изменений" class="w-full h-auto mb-6 rounded-sm shadow-md object-contain max-h-64">
+                        <div class="flex items-center gap-4 mb-4">
+                            <i data-lucide="book" class="h-8 w-8 text-copper shrink-0"></i>
+                            <h3 class="text-xl font-bold text-paper leading-tight">Техника "Пустого стула" как механизм изменений</h3>
+                        </div>
+                        <p class="text-copper-bright text-sm uppercase tracking-widest font-bold mb-4">Скотт Келлогг</p>
+                        <p class="text-paper/90 font-light text-lg leading-relaxed flex-grow">В издании рассматривается метод «пустого стула» и практическое руководство по его применению для решения разнообразных клинических проблем. Психотерапевтические диалоги в клинической практике.</p>
+                    </div>
+                </div>
+
+                <div class="mt-16 text-center"><button onclick="showPage('home-view')" class="px-10 py-4 border border-copper text-copper-bright hover:bg-copper/10 rounded-full transition-all shadow-lg"><i data-lucide="arrow-left" class="mr-2 h-5 w-5 inline"></i> Вернуться на главную</button></div>
             </div>
         </div>
 
@@ -472,7 +648,7 @@
                     <div class="w-32 h-1 bg-copper/30 mx-auto mb-8"></div>
                     <p class="text-xl text-paper/90 font-light max-w-3xl mx-auto">Официальные сертифицированные программы обучения Транзактному Анализу по международным стандартам.</p>
                     <div class="mt-8 inline-block bg-navy/40 border border-copper/30 px-6 py-4 rounded-sm shadow-md">
-                        <p class="text-paper text-lg font-medium flex items-center justify-center gap-3"><i data-lucide="award" class="h-6 w-6 text-copper shrink-0"></i><span><strong class="text-copper-bright uppercase tracking-widest text-sm mr-1">Удостоверение о повышении квалификации</strong> — выдается при обучении по программе в объеме свыше 72 часов</span></p>
+                        <p class="text-paper text-lg font-medium flex items-center justify-center gap-3"><i data-lucide="award" class="h-6 w-6 text-copper shrink-0"></i><span><strong class="text-copper-bright uppercase tracking-widest text-sm mr-1">Удостоверение о повышении квалификации</strong> — выдается при обучении по программе в объеме от 36 часов</span></p>
                     </div>
                 </div>
 
@@ -501,7 +677,7 @@
                             <div class="inline-block px-3 py-1 rounded-full bg-copper/20 text-copper-bright text-xs font-bold tracking-widest uppercase mb-6 border border-copper/30 self-start">Практикум</div>
                             <h3 class="text-2xl font-bold text-paper leading-tight drop-shadow-md mb-4">Телесные техники</h3>
                             <p class="text-paper/80 font-light text-sm mb-6 flex-grow">Использование телесных техник в Транзактном анализе. Практикум для психологов.</p>
-                            <div class="space-y-2 text-sm font-light text-paper mb-8 border-t border-copper/10 pt-4"><p><span class="text-copper font-medium">Преподаватель:</span> Ирина Пингарева</p><p><span class="text-copper font-medium">Даты:</span> 2, 3 и 4 ноября 2026 г.</p></div>
+                            <div class="space-y-2 text-sm font-light text-paper mb-8 border-t border-copper/10 pt-4"><p><span class="text-copper font-medium">Преподаватель:</span> Ирина Пингарева</p></div>
                             <button onclick="showPage('body-practices-view')" class="mt-auto w-full bg-navy border border-copper text-copper-bright hover:bg-copper hover:text-navy font-bold py-4 rounded-sm transition-all shadow-md flex justify-center items-center gap-2"><i data-lucide="book-open" class="h-4 w-4"></i> Подробнее о курсе</button>
                         </div>
                     </div>
@@ -705,12 +881,7 @@
                     <div class="inline-block px-4 py-1 rounded-full bg-copper/20 text-copper-bright text-sm font-bold tracking-widest uppercase mb-4 border border-copper/30">Телесные техники</div>
                     <h2 class="text-4xl md:text-5xl font-bold text-copper-bright mb-6">Тело как ресурс: Использование телесных техник в Транзактном анализе</h2>
                     
-                    <div class="inline-block bg-navy-light/80 border border-copper/50 px-8 py-4 rounded-sm shadow-[0_0_15px_rgba(179,106,40,0.2)] mb-8">
-                        <div class="flex flex-col md:flex-row items-center justify-center gap-1 md:gap-3">
-                            <span class="text-paper/80 font-light text-base uppercase tracking-widest flex items-center"><i data-lucide="calendar" class="mr-2 h-5 w-5 text-copper"></i> Ближайшие даты:</span>
-                            <span class="text-xl md:text-2xl font-bold text-copper-bright">2, 3 и 4 ноября 2026 года</span>
-                        </div>
-                    </div>
+                    <!-- Dates removed -->
 
                     <div class="w-32 h-1 bg-copper/30 mx-auto mb-8"></div>
                     <p class="text-xl text-paper/90 font-light max-w-3xl mx-auto leading-relaxed">
@@ -728,7 +899,10 @@
                                 <li class="flex items-start"><i data-lucide="check-circle-2" class="h-6 w-6 text-copper mr-3 mt-1 shrink-0"></i> Проживете собственные блоки</li>
                                 <li class="flex items-start"><i data-lucide="check-circle-2" class="h-6 w-6 text-copper mr-3 mt-1 shrink-0"></i> Соединитесь с коллегами в теплой доверительной атмосфере</li>
                                 <li class="flex items-start"><i data-lucide="check-circle-2" class="h-6 w-6 text-copper mr-3 mt-1 shrink-0"></i> Напитаете своего «внутреннего ребенка», потому что наше тело и есть наш внутренний ребенок</li>
-                                <li class="flex items-start"><i data-lucide="check-circle-2" class="h-6 w-6 text-copper mr-3 mt-1 shrink-0"></i> Познакомитесь со стадией планирования и особенностями заключения контракта на проведение упражнений</li>
+                                <li class="flex items-start"><i data-lucide="check-circle-2" class="h-6 w-6 text-copper mr-3 mt-1 shrink-0"></i> <span>Познакомитесь со стадией планирования и особенностями заключения контракта на проведение упражнений</span></li>
+                                <li class="flex items-start"><i data-lucide="check-circle-2" class="h-6 w-6 text-copper mr-3 mt-1 shrink-0"></i> <span><strong>Пополните свой профессиональный арсенал 36 мощными телесными упражнениями</strong> для работы с клиентами</span></li>
+                                <li class="flex items-start"><i data-lucide="check-circle-2" class="h-6 w-6 text-copper mr-3 mt-1 shrink-0"></i> <span>По окончании получите <strong>подробную методичку</strong> с пошаговым описанием всех пройденных техник</span></li>
+                                <li class="flex items-start"><i data-lucide="check-circle-2" class="h-6 w-6 text-copper mr-3 mt-1 shrink-0"></i> <span>После окончания семинара <strong>Ирина будет вести личный прием</strong></span></li>
                             </ul>
                         </div>
 
@@ -769,7 +943,7 @@
                             <h4 class="text-2xl font-bold text-copper-bright mb-2">Ирина Пингарева</h4>
                             <p class="text-paper/80 font-light text-base mb-4">Преподаватель курса</p>
                             <p class="text-paper text-base text-left leading-relaxed">
-                                Психоаналитик; Сертифицированный транзактный аналитик (PTSTA-P) европейского реестра; Телесно-ориентированный терапевт; Супервизор; Групповой психотерапевт; Автор образовательных и терапевтических семинаров и вебинаров.
+                                Сертифицированный Транзактный Аналитик (СТА-р), Предварительный тренер и супервизор в Транзактном Анализе (PTSTA-p). Телесно-ориентированный терапевт, супервизор, групповой психотерапевт. Автор образовательных и терапевтических семинаров и вебинаров.
                             </p>
                         </div>
                         
