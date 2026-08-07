@@ -126,19 +126,12 @@
                             <ul class="py-2 text-sm">
                                 <li><a href="#" onclick="showPage('history-view'); return false;" class="block px-5 py-3 text-paper hover:bg-burgundy hover:text-copper-bright transition-colors border-b border-copper/10">История ТА</a></li>
                                 <li><a href="#" onclick="showPage('types-view'); return false;" class="block px-5 py-3 text-paper hover:bg-burgundy hover:text-copper-bright transition-colors border-b border-copper/10">Виды ТА</a></li>
-                                <li><a href="#" onclick="showPage('concepts-view'); return false;" class="block px-5 py-3 text-paper hover:bg-burgundy hover:text-copper-bright transition-colors">Ключевые концепции</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="relative group h-full flex items-center">
-                        <a href="#" class="text-base text-paper hover:text-copper-bright transition-colors font-medium flex items-center">Обучение и сертификация <i data-lucide="chevron-down" class="ml-1 h-4 w-4"></i></a>
-                        <div class="absolute top-24 left-0 w-72 bg-navy border border-copper/20 shadow-2xl rounded-b-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                            <ul class="py-2 text-sm">
-                                <li><a href="#" onclick="showPage('courses-view'); return false;" class="block px-5 py-3 text-paper hover:bg-burgundy hover:text-copper-bright transition-colors border-b border-copper/10">Курсы и программы</a></li>
+                                <li><a href="#" onclick="showPage('concepts-view'); return false;" class="block px-5 py-3 text-paper hover:bg-burgundy hover:text-copper-bright transition-colors border-b border-copper/10">Ключевые концепции</a></li>
                                 <li><a href="#" onclick="showPage('certification-view'); return false;" class="block px-5 py-3 text-paper hover:bg-burgundy hover:text-copper-bright transition-colors">Сертификация</a></li>
                             </ul>
                         </div>
                     </div>
+                    <div class="relative group h-full flex items-center"><a href="#" onclick="showPage('courses-view'); return false;" class="text-base text-paper hover:text-copper-bright transition-colors font-medium flex items-center">Обучение</a></div>
                     <div class="relative group h-full flex items-center">
                         <a href="#" class="text-base text-paper hover:text-copper-bright transition-colors font-medium flex items-center">Практика <i data-lucide="chevron-down" class="ml-1 h-4 w-4"></i></a>
                         <div class="absolute top-24 left-0 w-64 bg-navy border border-copper/20 shadow-2xl rounded-b-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
@@ -159,6 +152,7 @@
                     </div>
                     <div class="relative group h-full flex items-center"><a href="#" onclick="showPage('psychologta-view'); return false;" class="text-base text-paper hover:text-copper-bright transition-colors font-medium flex items-center">ПсихологТА</a></div>
                     <div class="relative group h-full flex items-center"><a href="#" onclick="showPage('books-view'); return false;" class="relative text-base text-paper hover:text-copper-bright transition-colors font-medium flex items-center">Книги</a></div>
+                    <div class="relative group h-full flex items-center"><a href="#" onclick="showPage('free-view'); return false;" class="relative text-base text-paper hover:text-copper-bright transition-colors font-medium flex items-center">Бесплатно</a></div>
                 </nav>
 
                 <div class="hidden lg:flex items-center space-x-4 shrink-0 relative z-10">
@@ -172,12 +166,13 @@
         <div id="mobile-menu" class="hidden xl:hidden bg-navy-light border-t border-copper/20 max-h-[80vh] overflow-y-auto shadow-2xl absolute w-full left-0 z-40">
             <div class="px-6 pt-6 pb-8 space-y-8">
                 <div><a href="#" onclick="showPage('about-us-view'); return false;" class="font-bold text-copper-bright text-xl hover:text-copper flex items-center transition-colors border-b border-copper/10 pb-2">О нас</a></div>
-                <div><div class="font-bold text-copper-bright text-xl mb-3 border-b border-copper/10 pb-2">О ТА</div><div class="pl-4 space-y-3 border-l-2 border-burgundy"><a href="#" onclick="showPage('history-view'); return false;" class="block text-lg text-paper hover:text-copper transition-colors">История ТА</a><a href="#" onclick="showPage('types-view'); return false;" class="block text-lg text-paper hover:text-copper transition-colors">Виды ТА</a><a href="#" onclick="showPage('concepts-view'); return false;" class="block text-lg text-paper hover:text-copper transition-colors">Ключевые концепции</a></div></div>
-                <div><div class="font-bold text-copper-bright text-xl mb-3 border-b border-copper/10 pb-2">Обучение и сертификация</div><div class="pl-4 space-y-3 border-l-2 border-burgundy"><a href="#" onclick="showPage('courses-view'); return false;" class="block text-lg text-paper hover:text-copper transition-colors">Курсы и программы</a><a href="#" onclick="showPage('certification-view'); return false;" class="block text-lg text-paper hover:text-copper transition-colors">Сертификация</a></div></div>
+                <div><div class="font-bold text-copper-bright text-xl mb-3 border-b border-copper/10 pb-2">О ТА</div><div class="pl-4 space-y-3 border-l-2 border-burgundy"><a href="#" onclick="showPage('history-view'); return false;" class="block text-lg text-paper hover:text-copper transition-colors">История ТА</a><a href="#" onclick="showPage('types-view'); return false;" class="block text-lg text-paper hover:text-copper transition-colors">Виды ТА</a><a href="#" onclick="showPage('concepts-view'); return false;" class="block text-lg text-paper hover:text-copper transition-colors">Ключевые концепции</a><a href="#" onclick="showPage('certification-view'); return false;" class="block text-lg text-paper hover:text-copper transition-colors">Сертификация</a></div></div>
+                <div><a href="#" onclick="showPage('courses-view'); return false;" class="font-bold text-copper-bright text-xl hover:text-copper flex items-center transition-colors border-b border-copper/10 pb-2">Обучение</a></div>
                 <div><div class="font-bold text-copper-bright text-xl mb-3 border-b border-copper/10 pb-2">Практика</div><div class="pl-4 space-y-3 border-l-2 border-burgundy"><a href="#" onclick="showPage('practice-courses-view'); return false;" class="block text-lg text-paper hover:text-copper transition-colors">Курсы по практике</a><a href="#" onclick="showToast('Тренажёры в разработке 🚀'); return false;" class="block text-lg text-paper hover:text-copper transition-colors">Тренажёры</a><a href="#" onclick="showPage('course-detail-wings-view'); return false;" class="block text-lg text-paper hover:text-copper transition-colors">Мастерская «На крыло»</a></div></div>
                 <div><div class="font-bold text-copper-bright text-xl mb-3 border-b border-copper/10 pb-2">Супервизия</div><div class="pl-4 space-y-3 border-l-2 border-burgundy"><a href="#" onclick="showPage('supervision-group-view'); return false;" class="block text-lg text-paper hover:text-copper transition-colors">Групповая</a></div></div>
                 <div><a href="#" onclick="showPage('psychologta-view'); return false;" class="font-bold text-copper-bright text-xl hover:text-copper flex items-center transition-colors border-b border-copper/10 pb-2">ПсихологТА</a></div>
                 <div><a href="#" onclick="showPage('books-view'); return false;" class="font-bold text-copper-bright text-xl hover:text-copper flex items-center transition-colors border-b border-copper/10 pb-2">Книги</a></div>
+                <div><a href="#" onclick="showPage('free-view'); return false;" class="font-bold text-copper-bright text-xl hover:text-copper flex items-center transition-colors border-b border-copper/10 pb-2">Бесплатно</a></div>
             </div>
         </div>
     </header>
@@ -226,10 +221,28 @@
                 <img data-img="logo" class="smart-img absolute -top-20 -right-20 w-[600px] opacity-[0.05] grayscale mix-blend-screen transform rotate-12 pointer-events-none" alt="Фон" />
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col lg:flex-row items-center">
                     <div class="lg:w-1/2 lg:pr-12">
-                        <div class="inline-block transform -rotate-3 mb-6"><span class="font-handwriting text-3xl text-copper-bright">Приемная кампания 2026</span><div class="h-px bg-copper w-full mt-1"></div></div>
                         <h2 class="text-5xl md:text-7xl font-bold text-copper-bright mb-8 leading-tight copper-glow">Создаем будущее,<br><span class="font-handwriting font-normal text-paper-dark italic">понимая сценарии</span></h2>
                         <p class="text-xl md:text-2xl text-paper mb-12 font-light leading-relaxed">Добро пожаловать в КИТА — место, где ваша личность обретает автономность и новые смыслы.</p>
-                        <button onclick="showPage('types-view')" class="bg-copper text-navy font-bold text-xl px-12 py-4 rounded-full shadow-2xl hover:bg-copper-bright transition-all">Узнать больше <i data-lucide="chevron-right" class="inline-block ml-2"></i></button>
+                        <div class="flex flex-col sm:flex-row items-center gap-4">
+                            <button onclick="showPage('types-view')" class="w-full sm:w-auto bg-copper text-navy font-bold text-xl px-12 py-4 rounded-full shadow-2xl hover:bg-copper-bright transition-all">Узнать больше <i data-lucide="chevron-right" class="inline-block ml-2"></i></button>
+                        </div>
+                        
+                        <!-- Mini Promo Plaque to jump to Free Section -->
+                        <div class="mt-8">
+                            <a href="#" onclick="showPage('free-view'); return false;" class="inline-flex items-center gap-4 bg-navy/90 hover:bg-navy border border-copper/50 p-4 sm:p-5 rounded-sm shadow-xl transition-all group hover:border-copper-bright hover:shadow-[0_0_25px_rgba(179,106,40,0.35)] text-left cursor-pointer">
+                                <div class="w-14 h-14 rounded-sm bg-burgundy border border-copper/40 flex flex-col items-center justify-center text-copper-bright shrink-0 group-hover:scale-105 transition-transform shadow-md">
+                                    <span class="text-[9px] uppercase font-bold tracking-wider text-paper/80 leading-none">АВГУСТ</span>
+                                    <span class="text-xs font-bold leading-none mt-1 text-copper-bright">2026</span>
+                                    <img src="sticker (4).webp" alt="КИТА" class="w-3.5 h-3.5 object-contain mt-0.5" />
+                                </div>
+                                <div class="flex-grow">
+                                    <div class="text-paper text-base sm:text-lg font-semibold group-hover:text-copper-bright transition-colors flex items-center gap-2">
+                                        <span>Бесплатные эфиры августа</span>
+                                        <i data-lucide="arrow-right" class="h-4 w-4 text-copper-bright group-hover:translate-x-1 transition-transform"></i>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                     <div class="lg:w-1/2 mt-16 lg:mt-0 relative">
                         <div class="photo-frame relative p-2 transform rotate-2">
@@ -574,6 +587,165 @@
                 </div>
 
                 <div class="mt-16 text-center"><button onclick="showPage('home-view')" class="px-10 py-4 border border-copper text-copper-bright hover:bg-copper/10 rounded-full transition-all shadow-lg"><i data-lucide="arrow-left" class="mr-2 h-5 w-5 inline"></i> Вернуться на главную</button></div>
+            </div>
+        </div>
+
+        <div id="free-view" style="display: none;" class="py-12 fade-in relative overflow-hidden">
+            <img data-img="logo" class="smart-img absolute top-1/2 right-0 w-[500px] md:w-[700px] opacity-[0.03] grayscale mix-blend-screen transform -translate-y-1/2 translate-x-1/4 pointer-events-none" alt="Фон" />
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center mb-16">
+                    <div class="inline-block mb-4">
+                        <span class="font-sans text-xs font-bold text-copper-bright uppercase tracking-widest bg-burgundy/80 border border-copper/40 px-4 py-1.5 rounded-full inline-flex items-center justify-center gap-2 shadow-lg">
+                            <i data-lucide="sparkles" class="h-3.5 w-3.5 text-copper-bright"></i> 5 бесплатных открытых онлайн-эфиров • 18:00 (по Алмате)
+                        </span>
+                    </div>
+                    <h2 class="text-4xl md:text-6xl font-bold text-copper-bright mb-6 drop-shadow-md">Бесплатные эфиры августа 2026</h2>
+                    <div class="w-32 h-1 bg-copper/30 mx-auto mb-6"></div>
+                    <p class="text-xl text-paper/90 font-light max-w-3xl mx-auto leading-relaxed">
+                        Подготовили для вас расписание бесплатных открытых онлайн-эфиров на август. Все встречи будут проходить в 18:00 (по Алмате). Сохраняйте даты, чтобы не пропустить! 🗓️
+                    </p>
+                    
+                    <!-- Navigator & Practice Diagnostic Announcement Banner -->
+                    <div class="mt-8 max-w-3xl mx-auto bg-burgundy/80 border border-copper/50 p-5 sm:p-6 rounded-sm shadow-2xl text-left backdrop-blur-md space-y-3">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-copper/20 border border-copper/50 flex items-center justify-center shrink-0 text-copper-bright shadow-inner mt-0.5">
+                                <i data-lucide="compass" class="h-6 w-6"></i>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="text-base sm:text-lg font-bold text-copper-bright leading-snug">
+                                    🎁 И еще кое-что: в этой серии эфиров мы предлагаем вам провести диагностику собственной профессиональной практики.
+                                </div>
+                                <p class="text-sm sm:text-base text-paper/90 font-light leading-relaxed">
+                                    ❓ <strong>После каждого эфира вы получаете одну часть «Навигатора уверенной практики».</strong> В конце пяти эфиров соберёте навигатор и карту профессионального развития, чтобы ответить себе на вопрос: <em>почему клиентов нет или их мало, и как развивать практику</em>.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                    <!-- Left Column: Interactive Calendar -->
+                    <div class="lg:col-span-5 glass-panel p-6 sm:p-8 rounded-sm border border-copper/30 shadow-2xl relative">
+                        <div class="flex items-center justify-between mb-6 pb-4 border-b border-copper/20">
+                            <div class="flex items-center gap-3">
+                                <div class="p-1.5 bg-copper/20 border border-copper/40 rounded-sm">
+                                    <img data-img="logo" alt="Логотип КИТА" class="smart-img w-7 h-7 object-contain drop-shadow" />
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-paper font-sans tracking-wide">Август 2026</h3>
+                                    <p class="text-xs text-copper-bright uppercase tracking-widest font-semibold">Календарь КИТА • 18:00</p>
+                                </div>
+                            </div>
+                            <div id="calendar-today-badge" class="text-xs font-semibold px-3 py-1 bg-navy border border-copper/40 text-copper-bright rounded-full flex items-center gap-1.5 shadow-sm">
+                                <span class="w-2 h-2 rounded-full bg-copper-bright animate-ping"></span>
+                                <span>Сегодня: <span id="current-today-date"></span></span>
+                            </div>
+                        </div>
+
+                        <!-- Weekday Headers -->
+                        <div class="grid grid-cols-7 gap-1 sm:gap-2 mb-2 text-center text-xs font-bold text-copper uppercase tracking-wider">
+                            <div class="py-2">Пн</div>
+                            <div class="py-2">Вт</div>
+                            <div class="py-2">Ср</div>
+                            <div class="py-2">Чт</div>
+                            <div class="py-2">Пт</div>
+                            <div class="py-2 text-paper/40">Сб</div>
+                            <div class="py-2 text-paper/40">Вс</div>
+                        </div>
+
+                        <!-- Calendar Grid (Populated via JS) -->
+                        <div id="august-calendar-grid" class="grid grid-cols-7 gap-1 sm:gap-2"></div>
+
+                        <!-- Calendar Legend -->
+                        <div class="mt-6 pt-4 border-t border-copper/20 flex flex-wrap items-center justify-between gap-3 text-xs text-paper/80 font-light">
+                            <div class="flex items-center gap-2">
+                                <span class="w-3 h-3 rounded-full bg-copper shadow-[0_0_8px_rgba(179,106,40,0.8)]"></span>
+                                <span>Прямой эфир (кликните)</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="w-3 h-3 rounded-full border-2 border-copper-bright bg-copper/30"></span>
+                                <span>Сегодняшний день</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Streams Details & List -->
+                    <div class="lg:col-span-7 space-y-4">
+                        <!-- Featured/Selected Stream Preview -->
+                        <div id="selected-stream-card" class="worn-burgundy p-6 sm:p-8 rounded-sm border-2 border-copper shadow-2xl transition-all relative overflow-hidden">
+                            <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+                                <div class="flex items-center gap-2">
+                                    <span class="px-2.5 py-0.5 rounded-full bg-green-950/80 border border-green-500/50 text-green-300 text-xs font-bold uppercase tracking-wider">
+                                        Бесплатный эфир
+                                    </span>
+                                    <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-copper/20 text-copper-bright text-xs font-bold uppercase tracking-wider border border-copper/40" id="selected-stream-badge">
+                                        <i data-lucide="sparkles" class="h-3.5 w-3.5"></i> <span>Эфир 1</span>
+                                    </div>
+                                </div>
+                                <div class="text-xs font-medium text-copper-bright/90 bg-navy/60 px-3 py-1 rounded-full border border-copper/20 flex items-center gap-1.5" id="selected-stream-time">
+                                    <i data-lucide="clock" class="h-3.5 w-3.5 text-copper"></i> <span>18:00 (по Алмате)</span>
+                                </div>
+                            </div>
+                            <div class="text-sm font-bold text-copper mb-1" id="selected-stream-date">10 августа 2026 (Понедельник)</div>
+                            <h3 id="selected-stream-title" class="text-2xl sm:text-3xl font-bold text-paper mb-3 leading-snug">
+                                Транзактный Анализ: от растерянности к уверенному развитию практики
+                            </h3>
+                            <div class="flex items-start gap-2 text-paper/90 font-light text-base leading-relaxed mb-6">
+                                <span class="text-copper-bright font-bold">📣</span>
+                                <p id="selected-stream-desc">Как справиться с хаосом в голове, синдромом самозванца и страхом перед клиентами?</p>
+                            </div>
+                            
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-copper/20 text-sm mb-4">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-9 h-9 rounded-full bg-navy flex items-center justify-center text-copper border border-copper/30 shrink-0">
+                                        <i data-lucide="user" class="h-4 w-4"></i>
+                                    </div>
+                                    <div>
+                                        <div class="text-xs text-copper uppercase font-semibold">Ведущая</div>
+                                        <div id="selected-stream-speakers" class="text-paper font-medium">Ксения Цвиренко</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <div class="w-9 h-9 rounded-full bg-navy flex items-center justify-center text-copper border border-copper/30 shrink-0">
+                                        <i data-lucide="video" class="h-4 w-4"></i>
+                                    </div>
+                                    <div>
+                                        <div class="text-xs text-copper uppercase font-semibold">Формат</div>
+                                        <div id="selected-stream-format" class="text-paper font-medium">Онлайн • Свободный вход</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Navigator bonus notice inside card -->
+                            <div class="flex items-center gap-2.5 p-3 rounded-sm bg-navy/60 border border-copper/20 text-xs text-copper-bright mb-6">
+                                <i data-lucide="compass" class="h-4 w-4 text-copper-bright shrink-0"></i>
+                                <span><strong>Бонус эфира:</strong> часть «Навигатора уверенной практики» и карта развития.</span>
+                            </div>
+
+                            <div class="flex flex-wrap items-center justify-between gap-4">
+                                <a id="selected-stream-wa-btn" href="https://wa.me/77066077197?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%BF%D0%B8%D1%88%D1%83%20%D0%B2%D0%B0%D0%BC%20%D1%81%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0!%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%2C%20%D0%BA%D0%B0%D0%BA%20%D0%BF%D1%80%D0%B8%D1%81%D0%BE%D0%B5%D0%B4%D0%B8%D0%BD%D0%B8%D1%82%D1%8C%D1%81%D1%8F%20%D0%BA%20%D1%8D%D1%84%D0%B8%D1%80%D1%83" target="_blank" class="inline-flex items-center justify-center gap-2 bg-copper hover:bg-copper-bright text-navy font-bold px-6 py-3 rounded-sm transition-all shadow-lg text-sm uppercase tracking-wider">
+                                    <i data-lucide="arrow-right" class="h-4 w-4"></i> Узнать подробнее
+                                </a>
+                                <span class="text-xs text-paper/60 italic">Кликните на дату или карточку для выбора эфира</span>
+                            </div>
+                        </div>
+
+                        <!-- List of All August Broadcasts -->
+                        <div class="space-y-3" id="august-streams-list"></div>
+
+                        <div class="pt-4 text-center">
+                            <div class="inline-flex items-center gap-2 px-4 py-2 bg-navy/90 border border-copper/30 rounded-full text-copper-bright text-xs sm:text-sm font-medium shadow-md">
+                                <span>⏰ Ставьте будильники и до встречи на эфирах!</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-16 text-center">
+                    <button onclick="showPage('home-view')" class="px-10 py-4 border border-copper text-copper-bright hover:bg-copper/10 rounded-full transition-all shadow-lg">
+                        <i data-lucide="arrow-left" class="mr-2 h-5 w-5 inline"></i> Вернуться на главную
+                    </button>
+                </div>
             </div>
         </div>
 
@@ -1534,13 +1706,18 @@
         }
 
         function showPage(id) {
-            const pages = ['home-view', 'about-us-view', 'types-view', 'concepts-view', 'history-view', 'books-view', 'profile-view', 'psychologta-view', 'courses-view', 'course-detail-101-view', 'course-detail-202-view', 'practice-courses-view', 'course-detail-varvara-view', 'course-detail-wings-view', 'certification-view', 'supervision-group-view', 'privacy-view', 'consent-view', 'body-practices-view'];
+            const pages = ['home-view', 'about-us-view', 'types-view', 'concepts-view', 'history-view', 'books-view', 'free-view', 'profile-view', 'psychologta-view', 'courses-view', 'course-detail-101-view', 'course-detail-202-view', 'practice-courses-view', 'course-detail-varvara-view', 'course-detail-wings-view', 'certification-view', 'supervision-group-view', 'privacy-view', 'consent-view', 'body-practices-view'];
             if (!pages.includes(id)) id = 'home-view';
             pages.forEach(p => { const el = document.getElementById(p); if(el) el.style.display = (p === id) ? 'block' : 'none'; });
             window.scrollTo(0,0);
             const mobileMenu = document.getElementById('mobile-menu');
             if(mobileMenu) mobileMenu.classList.add('hidden');
             if (window.location.hash !== '#' + id) history.pushState(null, null, '#' + id);
+            if (id === 'free-view' && typeof renderAugustCalendar === 'function') {
+                renderAugustCalendar();
+                renderAugustStreamsList();
+            }
+            if (typeof lucide !== 'undefined') lucide.createIcons();
         }
 
         window.addEventListener('DOMContentLoaded', () => {
@@ -1714,6 +1891,243 @@
             }
             
             // Re-initialize icons for the new banner
+            lucide.createIcons();
+        });
+
+        // Open Free Section
+        function scrollToAugustCalendar(e) {
+            if (e) e.preventDefault();
+            showPage('free-view');
+        }
+
+        // ==========================================
+        // August 2026 Live Streams Calendar Logic
+        // ==========================================
+        const augustStreamsData = [
+            {
+                day: 10,
+                dateFormatted: '10 августа 2026 (Понедельник)',
+                title: 'Транзактный Анализ: от растерянности к уверенному развитию практики',
+                speakers: 'Ксения Цвиренко',
+                format: 'Онлайн • Свободный вход',
+                time: '18:00 (по Алмате)',
+                badge: 'Эфир 1',
+                desc: 'Как справиться с хаосом в голове, синдромом самозванца и страхом перед клиентами?'
+            },
+            {
+                day: 14,
+                dateFormatted: '14 августа 2026 (Пятница)',
+                title: 'Чего мне не хватало на старте практики? Личная история и секреты 202 курса',
+                speakers: 'Ирина Пингарёва и Ксения Цвиренко',
+                format: 'Онлайн • Свободный вход',
+                time: '18:00 (по Алмате)',
+                badge: 'Эфир 2',
+                desc: 'Откровенный разговор об опорах терапевта.'
+            },
+            {
+                day: 17,
+                dateFormatted: '17 августа 2026 (Понедельник)',
+                title: 'Институт КИТА - от обучения к устойчивой профессиональной практике',
+                speakers: 'Ксения Цвиренко',
+                format: 'Онлайн • Свободный вход',
+                time: '18:00 (по Алмате)',
+                badge: 'Эфир 3',
+                desc: 'Разбираем одиночество в профессии и ощущение «обучения по кускам».'
+            },
+            {
+                day: 24,
+                dateFormatted: '24 августа 2026 (Понедельник)',
+                title: 'КИТА - обучение, поддержка и практика в одном месте',
+                speakers: 'Ксения Цвиренко',
+                format: 'Онлайн • Свободный вход',
+                time: '18:00 (по Алмате)',
+                badge: 'Эфир 4',
+                desc: 'Теория без практики мертва. Как справляться со страхом и начать применять знания.'
+            },
+            {
+                day: 31,
+                dateFormatted: '31 августа 2026 (Понедельник)',
+                title: 'Программы развития практики для работы даже со сложными клиентами',
+                speakers: 'Ксения Цвиренко',
+                format: 'Онлайн • Свободный вход',
+                time: '18:00 (по Алмате)',
+                badge: 'Эфир 5',
+                desc: 'Что поможет работать даже с очень сложными клиентами.'
+            }
+        ];
+
+        let selectedStreamDay = 10;
+
+        function selectStream(day) {
+            selectedStreamDay = day;
+            const stream = augustStreamsData.find(s => s.day === day) || augustStreamsData[0];
+            
+            const badgeEl = document.getElementById('selected-stream-badge');
+            const timeEl = document.getElementById('selected-stream-time');
+            const dateEl = document.getElementById('selected-stream-date');
+            const titleEl = document.getElementById('selected-stream-title');
+            const descEl = document.getElementById('selected-stream-desc');
+            const speakersEl = document.getElementById('selected-stream-speakers');
+            const formatEl = document.getElementById('selected-stream-format');
+            const cardEl = document.getElementById('selected-stream-card');
+
+            if (badgeEl) badgeEl.innerHTML = `<i data-lucide="sparkles" class="h-3.5 w-3.5"></i> <span>${stream.badge}</span>`;
+            if (timeEl) timeEl.innerHTML = `<i data-lucide="clock" class="h-3.5 w-3.5 text-copper"></i> <span>${stream.time}</span>`;
+            if (dateEl) dateEl.innerText = stream.dateFormatted;
+            if (titleEl) titleEl.innerText = stream.title;
+            if (descEl) descEl.innerText = stream.desc;
+            if (speakersEl) speakersEl.innerText = stream.speakers;
+            if (formatEl) formatEl.innerText = stream.format;
+
+            const waBtn = document.getElementById('selected-stream-wa-btn');
+            if (waBtn) {
+                const message = `Здравствуйте, пишу вам с сайта! Хочу узнать, как присоединиться к эфиру «${stream.title}» (${stream.day} августа, 18:00)`;
+                waBtn.href = `https://wa.me/77066077197?text=${encodeURIComponent(message)}`;
+            }
+
+            if (cardEl) {
+                cardEl.classList.add('ring-2', 'ring-copper-bright');
+                setTimeout(() => cardEl.classList.remove('ring-2', 'ring-copper-bright'), 600);
+            }
+
+            renderAugustCalendar();
+            renderAugustStreamsList();
+            lucide.createIcons();
+        }
+
+        function renderAugustCalendar() {
+            const gridEl = document.getElementById('august-calendar-grid');
+            const todayDateEl = document.getElementById('current-today-date');
+            if (!gridEl) return;
+
+            gridEl.innerHTML = '';
+            
+            const now = new Date();
+            const currentDay = now.getDate();
+            const currentMonth = now.getMonth(); // 7 is August (0-indexed)
+            const currentYear = now.getFullYear();
+            
+            // Format today's date in badge
+            const monthNamesRu = ['янв', 'фев', 'мар', 'апр', 'май', 'июн', 'июл', 'авг', 'сен', 'окт', 'ноя', 'дек'];
+            if (todayDateEl) {
+                todayDateEl.innerText = `${currentDay} ${monthNamesRu[currentMonth] || 'авг'}`;
+            }
+
+            // In August 2026, Aug 1 is Saturday (5 empty cells for Mon-Fri)
+            // 0: Mon, 1: Tue, 2: Wed, 3: Thu, 4: Fri, 5: Sat, 6: Sun
+            const startDayOffset = 5; // Saturday
+            const totalDays = 31; // August has 31 days
+
+            // Render offset blank/previous month days
+            for (let i = 0; i < startDayOffset; i++) {
+                const prevDay = 27 + i; // July 27-31
+                const emptyCell = document.createElement('div');
+                emptyCell.className = 'h-11 sm:h-12 flex items-center justify-center text-paper/20 text-xs sm:text-sm font-light select-none';
+                emptyCell.innerText = prevDay;
+                gridEl.appendChild(emptyCell);
+            }
+
+            // Render days of August 1..31
+            for (let day = 1; day <= totalDays; day++) {
+                const hasStream = augustStreamsData.some(s => s.day === day);
+                const isSelected = selectedStreamDay === day;
+                const isToday = (currentMonth === 7 && currentDay === day) || (currentDay === day && currentYear === 2026 && currentMonth === 7) || (currentDay === day);
+
+                const cell = document.createElement('button');
+                cell.type = 'button';
+                
+                let baseClasses = 'h-11 sm:h-12 w-full rounded-sm flex flex-col items-center justify-center relative transition-all duration-300 select-none text-xs sm:text-sm ';
+                
+                if (hasStream) {
+                    if (isSelected) {
+                        baseClasses += 'bg-copper text-navy font-bold shadow-[0_0_15px_rgba(179,106,40,0.8)] scale-105 border-2 border-white z-10 ';
+                    } else {
+                        baseClasses += 'bg-burgundy/90 text-copper-bright border border-copper hover:bg-copper hover:text-navy hover:scale-105 font-bold shadow-md cursor-pointer ';
+                    }
+                } else {
+                    baseClasses += 'bg-navy/40 text-paper/80 border border-copper/10 hover:border-copper/30 hover:bg-navy/60 font-light ';
+                }
+
+                // Dynamic "Today" Ring / Highlight
+                if (isToday) {
+                    baseClasses += 'ring-2 ring-copper-bright ring-offset-1 ring-offset-navy font-bold ';
+                }
+
+                cell.className = baseClasses;
+                
+                let innerHTML = `<span>${day}</span>`;
+                
+                if (hasStream) {
+                    innerHTML = `
+                        <div class="flex items-center justify-center gap-1 leading-none">
+                            <span class="font-bold text-xs sm:text-sm">${day}</span>
+                            <img src="sticker (4).webp" alt="КИТА" class="w-3 h-3 sm:w-3.5 sm:h-3.5 object-contain" />
+                        </div>
+                        <span class="text-[8px] sm:text-[9px] uppercase tracking-tighter leading-none mt-0.5 ${isSelected ? 'text-navy font-bold' : 'text-copper-bright'}">эфир</span>
+                    `;
+                    cell.onclick = () => selectStream(day);
+                }
+
+                if (isToday && !hasStream) {
+                    innerHTML += `<span class="absolute -top-1 -right-1 w-2.5 h-2.5 bg-copper-bright rounded-full shadow-[0_0_6px_#e68a2e] animate-pulse"></span>`;
+                }
+
+                cell.innerHTML = innerHTML;
+                gridEl.appendChild(cell);
+            }
+        }
+
+        function renderAugustStreamsList() {
+            const listEl = document.getElementById('august-streams-list');
+            if (!listEl) return;
+
+            listEl.innerHTML = augustStreamsData.map(stream => {
+                const isSelected = selectedStreamDay === stream.day;
+                return `
+                    <div onclick="selectStream(${stream.day})" class="p-4 sm:p-5 rounded-sm border transition-all cursor-pointer flex flex-col sm:flex-row sm:items-center justify-between gap-4 ${
+                        isSelected 
+                            ? 'bg-navy border-copper-bright shadow-[0_0_15px_rgba(179,106,40,0.3)] translate-x-1' 
+                            : 'glass-panel border-copper/20 hover:border-copper/50 hover:bg-navy/60'
+                    }">
+                        <div class="flex items-start gap-4">
+                            <div class="px-3 py-2 rounded-sm text-center shrink-0 flex flex-col items-center justify-center min-w-[64px] ${isSelected ? 'bg-copper text-navy font-bold shadow-md' : 'bg-navy/90 border border-copper/40 text-copper-bright font-bold'}">
+                                <div class="flex items-center gap-1 mb-0.5">
+                                    <span class="text-lg sm:text-xl font-bold leading-none">${stream.day}</span>
+                                    <img src="sticker (4).webp" alt="КИТА" class="w-3.5 h-3.5 object-contain" />
+                                </div>
+                                <div class="text-[10px] uppercase font-semibold opacity-80">авг</div>
+                            </div>
+                            <div>
+                                <div class="flex flex-wrap items-center gap-2 mb-1">
+                                    <span class="text-xs font-bold text-copper-bright uppercase tracking-wider">${stream.badge}</span>
+                                    <span class="text-paper/40 text-xs">•</span>
+                                    <span class="text-xs text-copper font-medium flex items-center gap-1"><i data-lucide="clock" class="h-3 w-3"></i> 18:00 (по Алмате)</span>
+                                    <span class="text-paper/40 text-xs">•</span>
+                                    <span class="text-xs text-paper/90 font-medium">${stream.speakers}</span>
+                                </div>
+                                <h4 class="text-base sm:text-lg font-bold ${isSelected ? 'text-copper-bright' : 'text-paper'} leading-snug mb-1">
+                                    ${stream.title}
+                                </h4>
+                                <p class="text-xs text-paper/80 font-light line-clamp-2">
+                                    <span class="text-copper-bright">📣</span> ${stream.desc}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="shrink-0 flex items-center justify-between sm:justify-end gap-3 pt-2 sm:pt-0 border-t sm:border-t-0 border-copper/10">
+                            <span class="text-[11px] font-bold text-green-300 bg-green-950/80 px-2.5 py-1 rounded-sm border border-green-500/40 whitespace-nowrap uppercase tracking-wider">
+                                Бесплатно
+                            </span>
+                            <i data-lucide="chevron-right" class="h-5 w-5 ${isSelected ? 'text-copper-bright transform translate-x-1' : 'text-paper/40'} transition-transform"></i>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // Initialize calendar on load
+        document.addEventListener('DOMContentLoaded', () => {
+            renderAugustCalendar();
+            renderAugustStreamsList();
             lucide.createIcons();
         });
     </script>
