@@ -121,7 +121,7 @@
                 <nav class="hidden xl:flex items-center space-x-3 2xl:space-x-6 h-full relative z-10" onmouseenter="changeEgo('Ребёнок')">
                     <div class="relative group h-full flex items-center"><a href="#" onclick="showPage('about-us-view'); return false;" class="text-base text-paper hover:text-copper-bright transition-colors font-medium flex items-center">О нас</a></div>
                     <div class="relative group h-full flex items-center">
-                        <a href="#" class="text-base text-paper hover:text-copper-bright transition-colors font-medium flex items-center">О ТА <i data-lucide="chevron-down" class="ml-1 h-4 w-4"></i></a>
+                        <a href="#" onclick="return false;" class="text-base text-paper hover:text-copper-bright transition-colors font-medium flex items-center">О ТА <i data-lucide="chevron-down" class="ml-1 h-4 w-4"></i></a>
                         <div class="absolute top-24 left-0 w-64 bg-navy border border-copper/20 shadow-2xl rounded-b-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                             <ul class="py-2 text-sm">
                                 <li><a href="#" onclick="showPage('history-view'); return false;" class="block px-5 py-3 text-paper hover:bg-burgundy hover:text-copper-bright transition-colors border-b border-copper/10">История ТА</a></li>
@@ -133,7 +133,7 @@
                     </div>
                     <div class="relative group h-full flex items-center"><a href="#" onclick="showPage('courses-view'); return false;" class="text-base text-paper hover:text-copper-bright transition-colors font-medium flex items-center">Обучение</a></div>
                     <div class="relative group h-full flex items-center">
-                        <a href="#" class="text-base text-paper hover:text-copper-bright transition-colors font-medium flex items-center">Практика <i data-lucide="chevron-down" class="ml-1 h-4 w-4"></i></a>
+                        <a href="#" onclick="return false;" class="text-base text-paper hover:text-copper-bright transition-colors font-medium flex items-center">Практика <i data-lucide="chevron-down" class="ml-1 h-4 w-4"></i></a>
                         <div class="absolute top-24 left-0 w-64 bg-navy border border-copper/20 shadow-2xl rounded-b-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                             <ul class="py-2 text-sm">
                                 <li><a href="#" onclick="showPage('practice-courses-view'); return false;" class="block px-5 py-3 text-paper hover:bg-burgundy hover:text-copper-bright transition-colors border-b border-copper/10">Курсы по практике</a></li>
@@ -143,7 +143,7 @@
                         </div>
                     </div>
                     <div class="relative group h-full flex items-center">
-                        <a href="#" class="text-base text-paper hover:text-copper-bright transition-colors font-medium flex items-center">Супервизия <i data-lucide="chevron-down" class="ml-1 h-4 w-4"></i></a>
+                        <a href="#" onclick="return false;" class="text-base text-paper hover:text-copper-bright transition-colors font-medium flex items-center">Супервизия <i data-lucide="chevron-down" class="ml-1 h-4 w-4"></i></a>
                         <div class="absolute top-24 left-0 w-64 bg-navy border border-copper/20 shadow-2xl rounded-b-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                             <ul class="py-2 text-sm">
                                 <li><a href="#" onclick="showPage('supervision-group-view'); return false;" class="block px-5 py-3 text-paper hover:bg-burgundy hover:text-copper-bright transition-colors">Групповая</a></li>
@@ -265,7 +265,7 @@
                             <div class="inline-block mb-4"><span class="font-sans text-sm font-semibold text-copper uppercase tracking-widest border-b border-copper/30 pb-1">О ТА</span></div>
                             <h2 class="text-4xl md:text-5xl font-bold text-copper-bright mb-8 drop-shadow-md leading-tight">Что такое Транзактный Анализ?</h2>
                             <div class="space-y-6 text-paper text-lg font-light leading-relaxed">
-                                <p>Транзактный анализ (ТА) — это мощная теория личности и систематическая психотерапия, направленная на личностный рост и глубокие изменения.</p>
+                                <p>Транзактный анализ — это теория личности и систематическая психотерапия с целью личностного изменения и роста.</p>
                                 <p>Основанный Эриком Берном в середине 20 века, ТА предлагает понятный и универсальный язык для понимания человеческого поведения. В его основе лежит знаменитая концепция эго-состояний — <span class="text-copper-bright font-medium">Родитель, Взрослый и Дитя (Р В Д)</span>.</p>
                                 <div class="pl-6 border-l-2 border-copper mt-6"><p class="font-handwriting text-2xl md:text-3xl text-copper">«Любой человек способен думать, принимать решения и менять свою судьбу».</p></div>
                             </div>
@@ -278,19 +278,48 @@
                     </div>
                 </div>
             </section>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-24 mt-8">
+            </div>
+        
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 mt-16">
+        <!-- Navigator Advisor Banner -->
+                <div class="bg-navy border border-copper/40 rounded-sm p-8 md:p-12 shadow-2xl relative overflow-hidden group">
+                    <div class="absolute inset-0 z-0">
+                        <img src="assets/media_1786531582072.jpg" class="absolute right-0 top-0 w-full md:w-2/3 h-full object-cover opacity-20 md:opacity-40 mix-blend-luminosity group-hover:scale-105 group-hover:opacity-50 transition-all duration-1000" alt="Проводник в ТА" />
+                        <div class="absolute inset-0 bg-gradient-to-r from-navy via-navy/95 to-transparent"></div>
+                        <div class="absolute inset-0 bg-navy/60 md:hidden"></div>
+                    </div>
+                    <div class="relative z-10 flex flex-col md:flex-row items-center gap-10">
+                        <div class="flex-grow text-center md:text-left max-w-2xl">
+                            <div class="inline-block px-4 py-1 rounded-full bg-copper/20 text-copper-bright text-sm font-bold tracking-widest uppercase mb-4 border border-copper/30 shadow-md">Бесплатно</div>
+                            <h3 class="text-3xl md:text-4xl font-bold text-paper mb-4 drop-shadow-md">Не знаете, с чего начать?</h3>
+                            <p class="text-lg text-paper/80 font-light mb-6">Запишитесь на 15-20 минутную бесплатную онлайн-встречу с нашим <strong class="text-copper-bright font-bold">Проводником в ТА</strong>. Он подберет лучшую траекторию развития практики и роста в профессии согласно вашим запросам.</p>
+                            <a href="https://wa.me/77066077197?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%9F%D0%B8%D1%88%D1%83%20%D1%81%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0.%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B8%D1%82%D1%8C%20%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D0%B8%D1%8E%20%D0%BE%D1%82%20%D0%9F%D1%80%D0%BE%D0%B2%D0%BE%D0%B4%D0%BD%D0%B8%D0%BA%D0%B0%20%D0%B2%20%D0%A2%D0%90" target="_blank" class="inline-flex items-center justify-center gap-2 bg-copper hover:bg-copper-bright text-navy font-bold px-8 py-4 rounded-sm transition-all shadow-lg text-lg">
+                                <i data-lucide="message-circle" class="w-6 h-6"></i> Написать в WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div id="types-view" style="display: none;" class="py-12 fade-in">
             <img data-img="logo" class="smart-img absolute top-40 left-0 w-[600px] opacity-[0.03] grayscale mix-blend-screen transform -translate-x-1/4 pointer-events-none" alt="Фон" />
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div class="text-center mb-16 relative">
-                    <div class="inline-block mb-4"><span class="font-sans text-sm font-semibold text-copper uppercase tracking-widest border-b border-copper/30 pb-1">Раздел: О ТА</span></div>
-                    <h2 class="text-4xl md:text-5xl font-bold text-copper-bright mb-8 leading-tight">Что такое Транзактный анализ?</h2>
-                    <div class="max-w-4xl mx-auto space-y-6 text-paper text-lg md:text-xl font-light leading-relaxed mt-8 mb-16 text-left">
-                        <p>Транзактный анализ - это направление социальной психологии, разработанное доктором медицины Эриком Берном (1910-1970). Теория Берна состоит из ряда ключевых концепций, которые практики используют, чтобы помочь клиентам, студентам и организациям анализировать и изменять модели взаимодействия, мешающие достижению жизненных целей.</p>
-                        <p>За последние 60 лет теория Берна эволюционировала и теперь включает в себя применение в следующих сферах: <strong class="text-copper font-medium">Консультирование, Образование, Организационное развитие, Психотерапия</strong>.</p>
-                        <div class="p-6 mt-6 bg-navy/40 border-l-2 border-copper inline-block w-full shadow-lg">
-                            <p class="font-handwriting text-2xl md:text-3xl text-copper">Научные исследования подтвердили эффективность транзактного анализа в самых различных контекстах.</p>
+                <div class="bg-navy border border-copper/40 rounded-sm p-8 md:p-16 shadow-2xl relative overflow-hidden mb-16 group text-center lg:text-left">
+                    <div class="absolute inset-0 z-0">
+                        <img src="assets/media_1786531612259.jpg" class="absolute right-0 top-0 w-full md:w-2/3 h-full object-cover opacity-20 md:opacity-30 mix-blend-luminosity group-hover:scale-105 group-hover:opacity-40 transition-all duration-1000" alt="Транзактный анализ" />
+                        <div class="absolute inset-0 bg-gradient-to-r from-navy via-navy/95 to-transparent"></div>
+                        <div class="absolute inset-0 bg-navy/60 md:hidden"></div>
+                    </div>
+                    <div class="relative z-10 max-w-4xl">
+                        <div class="inline-block mb-4"><span class="font-sans text-sm font-semibold text-copper uppercase tracking-widest border-b border-copper/30 pb-1">Раздел: О ТА</span></div>
+                        <h2 class="text-4xl md:text-5xl font-bold text-copper-bright mb-8 leading-tight">Что такое Транзактный анализ?</h2>
+                        <div class="space-y-6 text-paper text-lg md:text-xl font-light leading-relaxed mt-8 text-left">
+                            <p>Транзактный анализ - это направление социальной психологии, разработанное доктором медицины Эриком Берном (1910-1970). Теория Берна состоит из ряда ключевых концепций, которые практики используют, чтобы помочь клиентам, студентам и организациям анализировать и изменять модели взаимодействия, мешающие достижению жизненных целей.</p>
+                            <p>За последние 60 лет теория Берна эволюционировала и теперь включает в себя применение в следующих сферах: <strong class="text-copper font-medium">Консультирование, Образование, Организационное развитие, Психотерапия</strong>.</p>
+                            
                         </div>
                     </div>
                 </div>
@@ -362,9 +391,16 @@
         <div id="history-view" style="display: none;" class="py-12 fade-in relative">
             <img data-img="logo" class="smart-img absolute top-40 right-0 w-[600px] opacity-[0.03] grayscale mix-blend-screen transform translate-x-1/4 pointer-events-none" alt="Фон" />
             <div class="max-w-6xl mx-auto px-4 relative z-10">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl md:text-6xl font-bold text-copper-bright mb-6">История ТА</h2>
-                    <div class="w-32 h-1 bg-copper/30 mx-auto mb-8"></div>
+                <div class="bg-navy border border-copper/40 rounded-sm p-8 md:p-16 shadow-2xl relative overflow-hidden mb-16 group text-center md:text-left">
+                    <div class="absolute inset-0 z-0">
+                        <img src="assets/media_1786531612259.jpg" class="absolute right-0 top-0 w-full md:w-2/3 h-full object-cover opacity-20 md:opacity-30 mix-blend-luminosity group-hover:scale-105 group-hover:opacity-40 transition-all duration-1000" alt="История ТА" />
+                        <div class="absolute inset-0 bg-gradient-to-r from-navy via-navy/95 to-transparent"></div>
+                        <div class="absolute inset-0 bg-navy/60 md:hidden"></div>
+                    </div>
+                    <div class="relative z-10 max-w-3xl mx-auto md:mx-0">
+                        <h2 class="text-4xl md:text-6xl font-bold text-copper-bright mb-6">История ТА</h2>
+                        <div class="w-32 h-1 bg-copper/30 mx-auto md:mx-0 mb-8"></div>
+                    </div>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
@@ -415,9 +451,18 @@
             <img data-img="logo" class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[120%] md:w-[80%] max-w-4xl opacity-[0.03] grayscale mix-blend-screen pointer-events-none z-0" alt="KITA Background">
             
             <div class="max-w-7xl mx-auto px-4 relative z-10">
-                <h2 class="text-4xl md:text-6xl font-bold text-copper-bright mb-6 text-center">Библиотека</h2>
-                <div class="w-32 h-1 bg-copper/30 mx-auto mb-12"></div>
-                <p class="text-xl text-paper/90 font-light max-w-3xl mx-auto text-center mb-16">Книги по Транзактному Анализу.</p>
+                <div class="bg-navy border border-copper/40 rounded-sm p-8 md:p-16 shadow-2xl relative overflow-hidden mb-16 group text-center md:text-left">
+                    <div class="absolute inset-0 z-0">
+                        <img src="assets/media_1786531635532.jpg" class="absolute right-0 top-0 w-full md:w-2/3 h-full object-cover opacity-20 md:opacity-30 mix-blend-luminosity group-hover:scale-105 group-hover:opacity-40 transition-all duration-1000" alt="Библиотека ТА" />
+                        <div class="absolute inset-0 bg-gradient-to-r from-navy via-navy/95 to-transparent"></div>
+                        <div class="absolute inset-0 bg-navy/60 md:hidden"></div>
+                    </div>
+                    <div class="relative z-10 max-w-3xl">
+                        <h2 class="text-4xl md:text-6xl font-bold text-copper-bright mb-6">Библиотека</h2>
+                        <div class="w-32 h-1 bg-copper/30 mx-auto md:mx-0 mb-8"></div>
+                        <p class="text-xl text-paper/90 font-light">Книги по Транзактному Анализу.</p>
+                    </div>
+                </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Book 1 -->
@@ -747,6 +792,27 @@
                     </button>
                 </div>
             </div>
+        
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 mt-16">
+        <!-- Navigator Advisor Banner -->
+                <div class="bg-navy border border-copper/40 rounded-sm p-8 md:p-12 shadow-2xl relative overflow-hidden group">
+                    <div class="absolute inset-0 z-0">
+                        <img src="assets/media_1786531582072.jpg" class="absolute right-0 top-0 w-full md:w-2/3 h-full object-cover opacity-20 md:opacity-40 mix-blend-luminosity group-hover:scale-105 group-hover:opacity-50 transition-all duration-1000" alt="Проводник в ТА" />
+                        <div class="absolute inset-0 bg-gradient-to-r from-navy via-navy/95 to-transparent"></div>
+                        <div class="absolute inset-0 bg-navy/60 md:hidden"></div>
+                    </div>
+                    <div class="relative z-10 flex flex-col md:flex-row items-center gap-10">
+                        <div class="flex-grow text-center md:text-left max-w-2xl">
+                            <div class="inline-block px-4 py-1 rounded-full bg-copper/20 text-copper-bright text-sm font-bold tracking-widest uppercase mb-4 border border-copper/30 shadow-md">Бесплатно</div>
+                            <h3 class="text-3xl md:text-4xl font-bold text-paper mb-4 drop-shadow-md">Не знаете, с чего начать?</h3>
+                            <p class="text-lg text-paper/80 font-light mb-6">Запишитесь на 15-20 минутную бесплатную онлайн-встречу с нашим <strong class="text-copper-bright font-bold">Проводником в ТА</strong>. Он подберет лучшую траекторию развития практики и роста в профессии согласно вашим запросам.</p>
+                            <a href="https://wa.me/77066077197?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%9F%D0%B8%D1%88%D1%83%20%D1%81%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0.%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B8%D1%82%D1%8C%20%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D0%B8%D1%8E%20%D0%BE%D1%82%20%D0%9F%D1%80%D0%BE%D0%B2%D0%BE%D0%B4%D0%BD%D0%B8%D0%BA%D0%B0%20%D0%B2%20%D0%A2%D0%90" target="_blank" class="inline-flex items-center justify-center gap-2 bg-copper hover:bg-copper-bright text-navy font-bold px-8 py-4 rounded-sm transition-all shadow-lg text-lg">
+                                <i data-lucide="message-circle" class="w-6 h-6"></i> Написать в WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div id="certification-view" style="display: none;" class="py-12 fade-in relative">
@@ -792,14 +858,14 @@
                     <div>
                         <h4 class="text-3xl font-bold text-copper-bright mb-6 flex items-center"><i data-lucide="clock" class="mr-3 h-8 w-8"></i> 2. Квалификационные требования (Правило 2000 часов)</h4>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                            <div class="glass-panel p-8 rounded-sm border-t-2 border-copper"><h5 class="font-bold text-2xl text-paper mb-4">750 часов контакта с клиентами</h5><ul class="space-y-3 text-paper/90 text-xl list-disc pl-5 marker:text-copper"><li>Минимум 500 часов должны быть проведены в модальности ТА.</li><li>Минимум 50 часов практики с группами и 50 часов индивидуально.</li></ul></div>
+                            <div class="glass-panel p-8 rounded-sm border-t-2 border-copper"><h5 class="font-bold text-2xl text-paper mb-4">750 часов контакта с клиентами</h5><ul class="space-y-3 text-paper/90 text-xl list-disc pl-5 marker:text-copper"><li>Минимум 500 часов должны быть проведены в модальности ТА.</li><li>Минимум 50 часов индивидуально.</li></ul></div>
                             <div class="glass-panel p-8 rounded-sm border-t-2 border-copper"><h5 class="font-bold text-2xl text-paper mb-4">600 часов профессионального обучения</h5><ul class="space-y-3 text-paper/90 text-xl list-disc pl-5 marker:text-copper"><li>Минимум 300 часов специализированное обучение ТА у сертифицированных тренеров (TSTA/PTSTA).</li><li><span class="text-copper font-medium">Важно:</span> не менее 30% (90 часов) от этого объема должны быть проведены экспертом именно в вашей области специализации.</li></ul></div>
-                            <div class="glass-panel p-8 rounded-sm border-t-2 border-copper"><h5 class="font-bold text-2xl text-paper mb-4">150 часов супервизии</h5><ul class="space-y-3 text-paper/90 text-xl list-disc pl-5 marker:text-copper"><li>Минимум 75 часов ТА-супервизии у TSTA или PTSTA.</li><li>Минимум 40 часов из них должны быть пройдены у вашего основного супервизора, с которым заключен контракт.</li></ul></div>
-                            <div class="glass-panel p-8 rounded-sm border-t-2 border-copper"><h5 class="font-bold text-2xl text-paper mb-4">500 часов дополнительного развития</h5><p class="text-paper/90 text-xl leading-relaxed font-light">Определяются индивидуально супервизором (включают личную терапию, участие в конференциях, дополнительные тренинги).</p></div>
+                            <div class="glass-panel p-8 rounded-sm border-t-2 border-copper"><h5 class="font-bold text-2xl text-paper mb-4">Заключен контракт СТА (150 часов супервизии)</h5><ul class="space-y-3 text-paper/90 text-xl list-disc pl-5 marker:text-copper"><li>Минимум 75 часов ТА-супервизии у TSTA или PTSTA.</li><li>Минимум 40 часов из них должны быть пройдены у вашего основного супервизора, с которым заключен контракт.</li></ul></div>
+                            <div class="glass-panel p-8 rounded-sm border-t-2 border-copper"><h5 class="font-bold text-2xl text-paper mb-4">Дополнительное развитие</h5><p class="text-paper/90 text-xl leading-relaxed font-light">Определяются индивидуально супервизором (включают личную терапию, участие в конференциях, дополнительные тренинги).</p></div>
                         </div>
                     </div>
-                    <div><h4 class="text-3xl font-bold text-copper-bright mb-6 flex items-center"><i data-lucide="users" class="mr-3 h-8 w-8"></i> 3. Правила учета часов супервизии</h4><ul class="space-y-4 text-paper/90 text-xl list-disc pl-6 marker:text-copper"><li><strong class="text-copper">Группы 2–3 человека:</strong> Каждый участник может засчитать себе все часы сессии, при условии, что каждый представил свою работу для супервизии.</li><li><strong class="text-copper">Группы от 4 человек:</strong> 1 час супервизии засчитывает только тот, кто делает презентацию кейса. Остальные участники засчитывают это время как часы продвинутого обучения (Professional Development).</li></ul></div>
-                    <div><h4 class="text-3xl font-bold text-copper-bright mb-6 flex items-center"><i data-lucide="brain" class="mr-3 h-8 w-8"></i> 4. Личная терапия и готовность</h4><p class="text-paper/90 text-xl font-light leading-relaxed">Хотя фиксированное количество часов личной терапии не установлено, IBOC рекомендует проходить её на протяжении всего периода обучения. Это критически важно для формирования «свободной от сценария» позиции специалиста и предотвращения вредоносного поведения в практике.</p></div>
+                    <div><h4 class="text-3xl font-bold text-copper-bright mb-6 flex items-center"><i data-lucide="users" class="mr-3 h-8 w-8"></i> 3. Правила учета часов супервизии</h4><ul class="space-y-4 text-paper/90 text-xl list-disc pl-6 marker:text-copper"><li><strong class="text-copper">Групповая супервизия:</strong> если вы презентовали клиента – засчитывается полное время работы всей группы (все 3 или 4 часа).</li></ul></div>
+                    <div><h4 class="text-3xl font-bold text-copper-bright mb-6 flex items-center"><i data-lucide="brain" class="mr-3 h-8 w-8"></i> 4. Личная терапия</h4><p class="text-paper/90 text-xl font-light leading-relaxed">Хотя фиксированное количество часов личной терапии не установлено, IBOC рекомендует проходить её на протяжении всего периода обучения. Это критически важно для формирования «свободной от сценария» позиции специалиста и предотвращения вредоносного поведения в практике.</p></div>
                     <div>
                         <h4 class="text-3xl font-bold text-copper-bright mb-8 flex items-center"><i data-lucide="calendar" class="mr-3 h-8 w-8"></i> 5. Ключевые сроки (Тimeline)</h4>
                         <div class="space-y-5">
@@ -817,12 +883,19 @@
         <div id="courses-view" style="display: none;" class="py-12 fade-in relative">
             <img data-img="logo" class="smart-img absolute top-40 left-0 w-[600px] opacity-[0.03] grayscale mix-blend-screen transform -translate-x-1/4 pointer-events-none" alt="Фон" />
             <div class="max-w-7xl mx-auto px-4 relative z-10">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl md:text-6xl font-bold text-copper-bright mb-6">Курсы и программы</h2>
-                    <div class="w-32 h-1 bg-copper/30 mx-auto mb-8"></div>
-                    <p class="text-xl text-paper/90 font-light max-w-3xl mx-auto">Официальные сертифицированные программы обучения Транзактному Анализу по международным стандартам.</p>
-                    <div class="mt-8 inline-block bg-navy/40 border border-copper/30 px-6 py-4 rounded-sm shadow-md">
-                        <p class="text-paper text-lg font-medium flex items-center justify-center gap-3"><i data-lucide="award" class="h-6 w-6 text-copper shrink-0"></i><span><strong class="text-copper-bright uppercase tracking-widest text-sm mr-1">Удостоверение о повышении квалификации</strong> — выдается при обучении по программе в объеме от 36 часов</span></p>
+                <div class="bg-navy border border-copper/40 rounded-sm p-8 md:p-16 shadow-2xl relative overflow-hidden mb-16 group text-center md:text-left">
+                    <div class="absolute inset-0 z-0">
+                        <img src="assets/media_1786531489292.jpg" class="absolute right-0 top-0 w-full md:w-2/3 h-full object-cover opacity-20 md:opacity-30 mix-blend-luminosity group-hover:scale-105 group-hover:opacity-40 transition-all duration-1000" alt="Летящие книги" />
+                        <div class="absolute inset-0 bg-gradient-to-r from-navy via-navy/95 to-transparent"></div>
+                        <div class="absolute inset-0 bg-navy/60 md:hidden"></div>
+                    </div>
+                    <div class="relative z-10 max-w-3xl">
+                        <h2 class="text-4xl md:text-6xl font-bold text-copper-bright mb-6">Курсы и программы</h2>
+                        <div class="w-32 h-1 bg-copper/30 mx-auto md:mx-0 mb-8"></div>
+                        <p class="text-xl text-paper/90 font-light mb-8">Официальные сертифицированные программы обучения Транзактному Анализу по международным стандартам.</p>
+                        <div class="inline-block bg-navy/80 border border-copper/30 px-6 py-4 rounded-sm shadow-md">
+                            <p class="text-paper text-lg font-medium flex items-center gap-3 text-left"><i data-lucide="award" class="h-6 w-6 text-copper shrink-0"></i><span><strong class="text-copper-bright uppercase tracking-widest text-sm mr-1 block mb-1">Удостоверение о повышении квалификации</strong> выдается при обучении по программе в объеме от 36 часов</span></p>
+                        </div>
                     </div>
                 </div>
 
@@ -857,8 +930,28 @@
                     </div>
                 </div>
             </div>
+        
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 mt-16">
+        <!-- Navigator Advisor Banner -->
+                <div class="bg-navy border border-copper/40 rounded-sm p-8 md:p-12 shadow-2xl relative overflow-hidden group">
+                    <div class="absolute inset-0 z-0">
+                        <img src="assets/media_1786531582072.jpg" class="absolute right-0 top-0 w-full md:w-2/3 h-full object-cover opacity-20 md:opacity-40 mix-blend-luminosity group-hover:scale-105 group-hover:opacity-50 transition-all duration-1000" alt="Проводник в ТА" />
+                        <div class="absolute inset-0 bg-gradient-to-r from-navy via-navy/95 to-transparent"></div>
+                        <div class="absolute inset-0 bg-navy/60 md:hidden"></div>
+                    </div>
+                    <div class="relative z-10 flex flex-col md:flex-row items-center gap-10">
+                        <div class="flex-grow text-center md:text-left max-w-2xl">
+                            <div class="inline-block px-4 py-1 rounded-full bg-copper/20 text-copper-bright text-sm font-bold tracking-widest uppercase mb-4 border border-copper/30 shadow-md">Бесплатно</div>
+                            <h3 class="text-3xl md:text-4xl font-bold text-paper mb-4 drop-shadow-md">Не знаете, с чего начать?</h3>
+                            <p class="text-lg text-paper/80 font-light mb-6">Запишитесь на 15-20 минутную бесплатную онлайн-встречу с нашим <strong class="text-copper-bright font-bold">Проводником в ТА</strong>. Он подберет лучшую траекторию развития практики и роста в профессии согласно вашим запросам.</p>
+                            <a href="https://wa.me/77066077197?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%9F%D0%B8%D1%88%D1%83%20%D1%81%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0.%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B8%D1%82%D1%8C%20%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D0%B8%D1%8E%20%D0%BE%D1%82%20%D0%9F%D1%80%D0%BE%D0%B2%D0%BE%D0%B4%D0%BD%D0%B8%D0%BA%D0%B0%20%D0%B2%20%D0%A2%D0%90" target="_blank" class="inline-flex items-center justify-center gap-2 bg-copper hover:bg-copper-bright text-navy font-bold px-8 py-4 rounded-sm transition-all shadow-lg text-lg">
+                                <i data-lucide="message-circle" class="w-6 h-6"></i> Написать в WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
         <div id="course-detail-101-view" style="display: none;" class="py-12 fade-in relative">
             <div class="max-w-6xl mx-auto px-4 relative z-10">
                 <div class="mb-8"><button onclick="showPage('courses-view')" class="text-copper hover:text-copper-bright transition-colors font-bold uppercase tracking-widest text-sm flex items-center"><i data-lucide="arrow-left" class="mr-2 h-4 w-4"></i> Назад к программам</button></div>
@@ -1145,14 +1238,46 @@
 
         <div id="practice-courses-view" style="display: none;" class="py-12 fade-in relative">
             <div class="max-w-7xl mx-auto px-4 relative z-10">
-                <div class="text-center mb-16"><h2 class="text-4xl md:text-6xl font-bold text-copper-bright mb-6">Курсы по практике</h2><div class="w-32 h-1 bg-copper/30 mx-auto mb-8"></div><p class="text-xl text-paper/90 font-light max-w-3xl mx-auto">Практические программы для начинающих и опытных специалистов.</p></div>
+                <div class="bg-navy border border-copper/40 rounded-sm p-8 md:p-16 shadow-2xl relative overflow-hidden mb-16 group text-center md:text-left">
+                    <div class="absolute inset-0 z-0">
+                        <img src="assets/media_1786531660381.jpg" class="absolute right-0 top-0 w-full md:w-2/3 h-full object-cover opacity-20 md:opacity-30 mix-blend-luminosity group-hover:scale-105 group-hover:opacity-40 transition-all duration-1000" alt="Курсы по практике" />
+                        <div class="absolute inset-0 bg-gradient-to-r from-navy via-navy/95 to-transparent"></div>
+                        <div class="absolute inset-0 bg-navy/60 md:hidden"></div>
+                    </div>
+                    <div class="relative z-10 max-w-3xl">
+                        <h2 class="text-4xl md:text-6xl font-bold text-copper-bright mb-6">Курсы по практике</h2>
+                        <div class="w-32 h-1 bg-copper/30 mx-auto md:mx-0 mb-8"></div>
+                        <p class="text-xl text-paper/90 font-light">Практические программы для начинающих и опытных специалистов.</p>
+                    </div>
+                </div>
+
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div class="bg-navy/80 rounded-sm border border-copper/30 shadow-xl overflow-hidden flex flex-col hover:border-copper transition-all group p-8 relative"><i data-lucide="feather" class="absolute top-4 right-4 h-24 w-24 text-copper/5 transform rotate-12 pointer-events-none"></i><div class="relative z-10 flex-grow flex flex-col"><div class="inline-block px-3 py-1 rounded-full bg-copper/20 text-copper-bright text-xs font-bold tracking-widest uppercase mb-6 border border-copper/30 self-start">Продвинутым</div><h3 class="text-2xl font-bold text-paper leading-tight drop-shadow-md mb-4">Мастерская «На крыло»</h3><p class="text-paper/80 font-light text-sm mb-6 flex-grow">Мастерская для тех, кто готов взлететь в своей практике и выйти на новый уровень профессионального мастерства.</p><div class="space-y-2 text-sm font-light text-paper mb-8 border-t border-copper/10 pt-4"><p><span class="text-copper font-medium">Преподаватель:</span> Ирина Пингарёва</p><p><span class="text-copper font-medium">Статус:</span> Открыт набор</p></div><button onclick="showPage('course-detail-wings-view')" class="mt-auto w-full bg-navy border border-copper text-copper-bright hover:bg-copper hover:text-navy font-bold py-4 rounded-sm transition-all shadow-md flex justify-center items-center gap-2">Узнать больше</button></div></div>
                     <div class="worn-burgundy rounded-sm border border-copper/30 shadow-xl overflow-hidden flex flex-col hover:border-copper transition-all group p-8 relative"><div class="relative z-10 flex-grow flex flex-col"><div class="inline-block px-3 py-1 rounded-full bg-copper/20 text-copper-bright text-xs font-bold tracking-widest uppercase mb-6 border border-copper/30 self-start">Основы</div><h3 class="text-2xl font-bold text-paper leading-tight drop-shadow-md mb-4">Основы психологического консультирования</h3><p class="text-paper/80 font-light text-sm mb-6 flex-grow">Курс для начинающих психологов: как проходит консультация, что говорить клиенту, как выстраивать работу и на что опираться в начале.</p><div class="space-y-2 text-sm font-light text-paper mb-8 border-t border-copper/10 pt-4"><p><span class="text-copper font-medium">Преподаватель:</span> Варвара Белоусова</p><p><span class="text-copper font-medium">Формат:</span> 4 занятия</p></div><button onclick="showPage('course-detail-varvara-view')" class="mt-auto w-full bg-navy border border-copper text-copper-bright hover:bg-copper hover:text-navy font-bold py-4 rounded-sm transition-all shadow-md flex justify-center items-center gap-2"><i data-lucide="book-open" class="h-4 w-4"></i> Подробнее о курсе</button></div></div>
                 </div>
             </div>
+        
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 mt-16">
+        <!-- Navigator Advisor Banner -->
+                <div class="bg-navy border border-copper/40 rounded-sm p-8 md:p-12 shadow-2xl relative overflow-hidden group">
+                    <div class="absolute inset-0 z-0">
+                        <img src="assets/media_1786531582072.jpg" class="absolute right-0 top-0 w-full md:w-2/3 h-full object-cover opacity-20 md:opacity-40 mix-blend-luminosity group-hover:scale-105 group-hover:opacity-50 transition-all duration-1000" alt="Проводник в ТА" />
+                        <div class="absolute inset-0 bg-gradient-to-r from-navy via-navy/95 to-transparent"></div>
+                        <div class="absolute inset-0 bg-navy/60 md:hidden"></div>
+                    </div>
+                    <div class="relative z-10 flex flex-col md:flex-row items-center gap-10">
+                        <div class="flex-grow text-center md:text-left max-w-2xl">
+                            <div class="inline-block px-4 py-1 rounded-full bg-copper/20 text-copper-bright text-sm font-bold tracking-widest uppercase mb-4 border border-copper/30 shadow-md">Бесплатно</div>
+                            <h3 class="text-3xl md:text-4xl font-bold text-paper mb-4 drop-shadow-md">Не знаете, с чего начать?</h3>
+                            <p class="text-lg text-paper/80 font-light mb-6">Запишитесь на 15-20 минутную бесплатную онлайн-встречу с нашим <strong class="text-copper-bright font-bold">Проводником в ТА</strong>. Он подберет лучшую траекторию развития практики и роста в профессии согласно вашим запросам.</p>
+                            <a href="https://wa.me/77066077197?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%9F%D0%B8%D1%88%D1%83%20%D1%81%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0.%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B8%D1%82%D1%8C%20%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D0%B8%D1%8E%20%D0%BE%D1%82%20%D0%9F%D1%80%D0%BE%D0%B2%D0%BE%D0%B4%D0%BD%D0%B8%D0%BA%D0%B0%20%D0%B2%20%D0%A2%D0%90" target="_blank" class="inline-flex items-center justify-center gap-2 bg-copper hover:bg-copper-bright text-navy font-bold px-8 py-4 rounded-sm transition-all shadow-lg text-lg">
+                                <i data-lucide="message-circle" class="w-6 h-6"></i> Написать в WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
         <div id="course-detail-varvara-view" style="display: none;" class="py-12 fade-in relative">
             <div class="max-w-6xl mx-auto px-4 relative z-10">
                 <div class="mb-8"><button onclick="showPage('practice-courses-view')" class="text-copper hover:text-copper-bright transition-colors font-bold uppercase tracking-widest text-sm flex items-center"><i data-lucide="arrow-left" class="mr-2 h-4 w-4"></i> Назад к списку курсов</button></div>
@@ -1194,20 +1319,144 @@
                     <div class="p-8 md:p-12 relative z-10">
                         <div class="inline-block px-4 py-1 rounded-full bg-copper/20 text-copper-bright text-sm font-bold tracking-widest uppercase mb-6 border border-copper/30">Наставническая группа</div>
                         <h3 class="text-3xl md:text-5xl font-bold text-paper mb-6 leading-tight">Мастерская «На крыло»</h3>
-                        <p class="text-xl text-paper/80 font-light mb-8 max-w-3xl leading-relaxed">Это наставническая группа для отработки навыков психологического консультирования. Немного теории, всё остальное время активно практикуем и тренируем, чтобы вы уверенно чувствовали себя в работе с клиентами.</p>
+                        <p class="text-xl text-paper/80 font-light mb-8 max-w-3xl leading-relaxed">В каждой профессии необходим опытный проводник.<br>Найти и встретить своего Мастера, который поможет взращивать в себе компетентного профессионала в уважительной обстановке — это начало большой совместной дороги в любую профессию.</p>
+
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16 mt-12">
-                            <div><h4 class="text-2xl font-bold text-copper-bright mb-6 flex items-center"><i data-lucide="check-circle" class="mr-3 h-6 w-6"></i> Формат работы</h4><ul class="space-y-4 text-paper/90 font-light text-lg"><li class="flex items-start"><i data-lucide="arrow-right" class="text-copper mr-3 h-5 w-5 shrink-0 mt-1"></i> <span>Встречи проходят 1 раз в 2 месяца.</span></li><li class="flex items-start"><i data-lucide="arrow-right" class="text-copper mr-3 h-5 w-5 shrink-0 mt-1"></i> <span>Продолжительность одной встречи — 4 часа.</span></li><li class="flex items-start"><i data-lucide="arrow-right" class="text-copper mr-3 h-5 w-5 shrink-0 mt-1"></i> <span>Минимум теории, максимум отработки навыков в парах и тройках.</span></li><li class="flex items-start"><i data-lucide="arrow-right" class="text-copper mr-3 h-5 w-5 shrink-0 mt-1"></i> <span>Работа в безопасной и поддерживающей среде коллег.</span></li></ul></div>
-                            <div class="bg-navy/60 p-8 rounded-sm border border-copper/30 shadow-lg"><h4 class="text-2xl font-bold text-copper-bright mb-6 flex items-center"><i data-lucide="info" class="mr-3 h-6 w-6"></i> Запись в группу</h4><div class="space-y-4 text-paper font-light text-lg mb-8"><p>В данный момент открыт набор участников. Количество мест строго ограничено для сохранения высокого качества практики.</p></div><a href="https://wa.link/uulpcl" target="_blank" class="w-full inline-flex bg-copper text-navy font-bold px-8 py-4 rounded-sm hover:bg-copper-bright transition-all shadow-lg items-center justify-center gap-2 text-lg">Оставить заявку</a></div>
+                            <div>
+                                <h4 class="text-2xl font-bold text-copper-bright mb-6 flex items-center"><i data-lucide="check-circle" class="mr-3 h-6 w-6"></i> Формат работы</h4>
+                                <ul class="space-y-4 text-paper/90 font-light text-lg">
+                                    <li class="flex items-start"><i data-lucide="arrow-right" class="text-copper mr-3 h-5 w-5 shrink-0 mt-1"></i> <span>Время: 10:00 - 14:00 (по времени Алматы).</span></li>
+                                    <li class="flex items-start"><i data-lucide="arrow-right" class="text-copper mr-3 h-5 w-5 shrink-0 mt-1"></i> <span>Количество участников: 8 человек (4 пары).</span></li>
+                                    <li class="flex items-start"><i data-lucide="arrow-right" class="text-copper mr-3 h-5 w-5 shrink-0 mt-1"></i> <span>В ходе работы предусмотрен перерыв 10 минут.</span></li>
+                                    <li class="flex items-start"><i data-lucide="arrow-right" class="text-copper mr-3 h-5 w-5 shrink-0 mt-1"></i> <span>Минимум теории, максимум отработки навыков.</span></li>
+                                </ul>
+                            </div>
+                            <div class="bg-navy/60 p-8 rounded-sm border border-copper/30 shadow-lg">
+                                <h4 class="text-2xl font-bold text-copper-bright mb-6 flex items-center"><i data-lucide="info" class="mr-3 h-6 w-6"></i> Запись в группу</h4>
+                                <div class="space-y-4 text-paper font-light text-lg mb-8">
+                                    <p>В данный момент открыт набор участников. Количество мест строго ограничено для сохранения высокого качества практики.</p>
+                                </div>
+                                <a href="https://wa.link/uulpcl" target="_blank" class="w-full inline-flex bg-copper text-navy font-bold px-8 py-4 rounded-sm hover:bg-copper-bright transition-all shadow-lg items-center justify-center gap-2 text-lg">Оставить заявку</a>
+                            </div>
                         </div>
-                        <h4 class="text-3xl font-bold text-copper-bright mb-8 text-center border-b border-copper/20 pb-4">Темы 6 модулей</h4>
-                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-                            <div class="glass-panel p-8 rounded-sm shadow-md text-center"><div class="text-copper font-handwriting text-5xl mb-3">1</div><h5 class="font-bold text-xl text-paper">Контрактирование</h5><p class="text-paper/70 mt-3 text-sm font-light">Учимся заключать четкие и безопасные контракты на изменения с клиентом.</p></div>
-                            <div class="glass-panel p-8 rounded-sm shadow-md text-center"><div class="text-copper font-handwriting text-5xl mb-3">2</div><h5 class="font-bold text-xl text-paper">Работа с поглаживаниями</h5><p class="text-paper/70 mt-3 text-sm font-light">Практика обмена поглаживаниями и анализ профиля поглаживаний.</p></div>
-                            <div class="glass-panel p-8 rounded-sm shadow-md text-center"><div class="text-copper font-handwriting text-5xl mb-3">3</div><h5 class="font-bold text-xl text-paper">Перефразирование</h5><p class="text-paper/70 mt-3 text-sm font-light">Тренировка эмпатического слушания, возврата смысла и присоединения.</p></div>
-                            <div class="glass-panel p-8 rounded-sm shadow-md text-center"><div class="text-copper font-handwriting text-5xl mb-3">4</div><h5 class="font-bold text-xl text-paper">Контаминация</h5><p class="text-paper/70 mt-3 text-sm font-light">Техники выявления и бережного очищения контаминаций (заражений) Взрослого.</p></div>
-                            <div class="glass-panel p-8 rounded-sm shadow-md text-center"><div class="text-copper font-handwriting text-5xl mb-3">5</div><h5 class="font-bold text-xl text-paper">Эго-состояния</h5><p class="text-paper/70 mt-3 text-sm font-light">Диагностика и практика смены эго-состояний в реальном диалоге.</p></div>
-                            <div class="glass-panel p-8 rounded-sm shadow-md text-center"><div class="text-copper font-handwriting text-5xl mb-3">6</div><h5 class="font-bold text-xl text-paper">Анализ Игр</h5><p class="text-paper/70 mt-3 text-sm font-light">Распознавание треугольника Карпмана в сессии и способы выхода из него.</p></div>
+
+                        <p class="text-2xl text-copper font-bold italic mb-12 max-w-3xl leading-relaxed uppercase mx-auto text-center">МАСТЕРСТВО ДОСТИГАЕТСЯ УПРАЖНЕНИЯМИ! (М. Булгаков)</p>
+
+                        <!-- Сертификация -->
+                        <div class="bg-navy/80 p-8 rounded-sm border border-copper/50 text-center shadow-xl mb-16">
+                            <div class="inline-block px-4 py-1 rounded-full bg-green-900/30 text-green-400 text-sm font-bold tracking-widest uppercase border border-green-500/30 shadow-md mb-4"><i data-lucide="award" class="inline-block mr-1 h-4 w-4 align-text-bottom"></i> Сертификация</div>
+                            <p class="text-xl md:text-2xl text-paper leading-relaxed mb-4">Часы засчитываются для СТА — <span class="font-bold text-copper-bright">32 академических сертифицированных часа супервизии</span>.</p>
+                            <p class="text-lg text-copper italic font-light">Группа набирается на все модули сразу.</p>
                         </div>
+
+                        <h4 class="text-3xl font-bold text-copper-bright mb-8 border-b border-copper/20 pb-4">Программа</h4>
+                        
+                        <div class="space-y-10 text-paper text-lg font-light mb-16">
+                            
+                            <!-- 1 -->
+                            <div class="glass-panel p-8 rounded-sm shadow-md">
+                                <h5 class="text-2xl font-bold text-copper-bright mb-4">1. 30 октября 2026 - Навыки активного слушания.</h5>
+                                <p class="leading-relaxed">Открытые, закрытые вопросы, перефразирование, эмпатическое отражение, присоединение, нормализация, парадоксальные интервенции, поглаживания и т.п. — инструменты, без которых не обойтись психологу в работе с клиентом. Важно избегать оценки, похвалы и советов! Будем разбираться в нюансах.</p>
+                            </div>
+                            
+                            <!-- 2 -->
+                            <div class="glass-panel p-8 rounded-sm shadow-md">
+                                <h5 class="text-2xl font-bold text-copper-bright mb-4">2. 27 ноября 2026 - 8 операций Берна: расспрос, уточнение (спецификация), конфронтация, объяснение.</h5>
+                                <ul class="space-y-4">
+                                    <li>
+                                        <p class="font-bold text-paper">• 1. Расспрос (Interrogation)</p>
+                                        <ul class="list-[circle] pl-6 text-paper/80 mt-1 space-y-1">
+                                            <li>Прямые вопросы терапевта.</li>
+                                            <li>Цель: зафиксировать факт. В-В</li>
+                                            <li>Пример: «Что ваш муж ответил, когда услышал вашу просьбу?»</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <p class="font-bold text-paper">• 2. Спецификация (Specification) или уточнение.</p>
+                                        <ul class="list-[circle] pl-6 text-paper/80 mt-1 space-y-1">
+                                            <li>Четкое фиксирование определенной информации.</li>
+                                            <li>Цель: отделить важный факт от домыслов.</li>
+                                            <li>Пример: «Выходит, когда Вы сильно кричите, на самом деле, Вы пугаетесь».</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <p class="font-bold text-paper">• 3. Конфронтация (Confrontation)</p>
+                                        <ul class="list-[circle] pl-6 text-paper/80 mt-1 space-y-1">
+                                            <li>Указание на явное несоответствие в словах или поведении.</li>
+                                            <li>Цель: выявить запутанность и обнаружить защиты Ребенка или Родителя (предрассудки, убеждения, иллюзии и т.д.).</li>
+                                            <li>Пример: «Вы говорите, что Вас мог ударить ваш отец, однако улыбаетесь, рассказывая об этом».</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <p class="font-bold text-paper">• 4. Объяснение (Explanation)</p>
+                                        <ul class="list-[circle] pl-6 text-paper/80 mt-1 space-y-1">
+                                            <li>Информация или разъяснение.</li>
+                                            <li>Цель: дать Взрослому пациента новые теоретические знания.</li>
+                                        </ul>
+                                        <p class="mt-2 text-paper/80 pl-6">Пример: «Многие люди не помнят, что именно говорили родители в детстве, они только помнят свою реакцию на эти слова, повторяют ее раз за разом. Наша задача - восстановить весь токсичный диалог, который теперь вы проигрываете внутри себя».</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <!-- 3 -->
+                            <div class="glass-panel p-8 rounded-sm shadow-md">
+                                <h5 class="text-2xl font-bold text-copper-bright mb-4">3. 22 января 2027 - 8 операций Берна: подтверждение, иллюстрация, интерпретация, кристаллизация.</h5>
+                                <ul class="space-y-4">
+                                    <li>
+                                        <p class="font-bold text-paper">• 5. Иллюстрация (Illustration)</p>
+                                        <ul class="list-[circle] pl-6 text-paper/80 mt-1 space-y-1">
+                                            <li>Использование метафоры, истории из книги, эпизода фильма, истории как примера или сравнения.</li>
+                                            <li>Цель: смягчить напряжение и сделать мысль понятной для Ребенка.</li>
+                                            <li>Пример: Похоже, как Дюймовочка долго не могла понять, кто она и откуда.</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <p class="font-bold text-paper">• 6. Подтверждение (Confirmation)</p>
+                                        <ul class="list-[circle] pl-6 text-paper/80 mt-1 space-y-1">
+                                            <li>Проверка устойчивости Взрослого при повторном возникновении проблемы.</li>
+                                            <li>Цель: закрепить полученный ранее инсайт.</li>
+                                            <li>Пример: «Помните, Вы обнаружили, что улыбаетесь, когда вам страшно или грустно, сейчас вы снова улыбнулись, когда говорили о печальном».</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <p class="font-bold text-paper">• 7. Интерпретация (Interpretation)</p>
+                                        <ul class="list-[circle] pl-6 text-paper/80 mt-1 space-y-1">
+                                            <li>Объяснение скрытых мотивов и работы подсознания (Ребенка).</li>
+                                            <li>Цель: расширить осознанность и интегрировать опыт.</li>
+                                            <li>Пример: «Иногда Вы можете подставить себя под отвержение, чтобы подтвердить детское убеждение, что вам никто не рад».</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <p class="font-bold text-paper">• 8. Кристаллизация (Crystallization)</p>
+                                        <ul class="list-[circle] pl-6 text-paper/80 mt-1 space-y-1">
+                                            <li>Кристаллизация - это формулирование позиции клиента Взрослым терапевта, обращенное ко Взрослому эго-состоянию клиента.</li>
+                                            <li>Цель: передать клиенту полную ответственность за изменения.</li>
+                                            <li>Пример: «Теперь вы можете, если захотите, остановить эту игру.»</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <!-- 4 -->
+                            <div class="glass-panel p-8 rounded-sm shadow-md">
+                                <h5 class="text-2xl font-bold text-copper-bright mb-4">4. 5 марта 2027 - Контаминация.</h5>
+                                <p class="leading-relaxed">Контаминация (загрязнение). Тренируем формулу определения контаминации. Это начало осознавания корня сценарных решений, стратегий.</p>
+                            </div>
+                            
+                            <!-- 5 -->
+                            <div class="glass-panel p-8 rounded-sm shadow-md">
+                                <h5 class="text-2xl font-bold text-copper-bright mb-4">5. 2 апреля 2027 - Мастерство формирования контрактов.</h5>
+                                <p class="leading-relaxed">Контракты на социальный контроль, административные, лечебные, исследовательские, на сессию, на стадию работы, контракты на проживание чувств, проживание тупиков, защитные контракты и т.д.</p>
+                            </div>
+                            
+                            <!-- 6 -->
+                            <div class="glass-panel p-8 rounded-sm shadow-md">
+                                <h5 class="text-2xl font-bold text-copper-bright mb-4">6. 30 апреля 2027 - Мастерство формирования контрактов.</h5>
+                                <p class="leading-relaxed">Оттачиваем мастерство составления контрактов (продолжение).</p>
+                            </div>
+                            
+                        </div>
+
                         <div class="bg-navy/80 rounded-sm p-8 md:p-12 border border-copper/30 flex flex-col md:flex-row gap-10 items-center md:items-start relative shadow-2xl">
                             <div class="w-64 h-64 md:w-[320px] md:h-[320px] shrink-0 relative mt-3 ml-3"><div class="absolute inset-0 border border-copper transform -translate-x-3 -translate-y-3 rounded-sm z-0"></div><img data-img="irina" alt="Ирина Пингарёва" class="w-full h-full object-cover border-4 border-[#eaddc5] rounded-sm relative z-10 shadow-lg" style="object-position: center 20%;" /></div>
                             <div class="relative z-10 text-center md:text-left flex flex-col justify-center h-full flex-grow mt-4 md:mt-0">
@@ -1576,10 +1825,6 @@
                         <li class="flex items-center hover:text-copper-bright transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 mr-3 text-copper shrink-0"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg><a href="https://instagram.com/kita.study" target="_blank">@kita.study</a></li>
                         <li class="flex items-center hover:text-copper-bright transition-colors"><i data-lucide="mail" class="h-6 w-6 mr-3 text-copper"></i><a href="mailto:kita.institute.ta@gmail.com">kita.institute.ta@gmail.com</a></li>
                     </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold text-xl mb-6 uppercase tracking-widest text-copper">Приемная комиссия</h4>
-                    <a href="https://wa.link/uulpcl" target="_blank" class="inline-block bg-burgundy text-paper-light border border-copper/50 font-bold px-6 py-2.5 rounded-full hover:bg-copper-dark transition-all text-lg shadow-[0_0_15px_rgba(179,106,40,0.2)]">Поступить</a>
                 </div>
             </div>
             
