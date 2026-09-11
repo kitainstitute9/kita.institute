@@ -479,6 +479,38 @@
                     </div>
                 </div>
 
+                <!-- Books Info Banner -->
+                <div class="mb-12 glass-panel p-8 rounded-sm border-l-4 border-copper/70 flex flex-col md:flex-row items-center gap-8 shadow-lg relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-r from-navy/40 to-transparent z-0"></div>
+                    <div class="relative z-10 flex-grow text-center md:text-left">
+                        <h3 class="text-2xl font-bold text-copper-bright mb-3 flex items-center justify-center md:justify-start gap-3">
+                            <i data-lucide="info" class="h-6 w-6"></i> Обратите внимание
+                        </h3>
+                        <p class="text-paper/90 text-lg font-light leading-relaxed mb-2">
+                            Визуальное оформление и обложки книг в реальности могут незначительно отличаться от представленных на сайте изображений.
+                        </p>
+                        <p class="text-paper text-lg font-light">
+                            По вопросам наличия, стоимости и оформления заказа, пожалуйста, пишите нам в WhatsApp.
+                        </p>
+                    </div>
+                    <div class="relative z-10 shrink-0 w-full md:w-auto mt-4 md:mt-0">
+                        <a href="https://wa.me/77066077197?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%20%D0%BA%D0%BD%D0%B8%D0%B3%D0%B8%20%D0%B8%D0%B7%20%D0%B1%D0%B8%D0%B1%D0%BB%D0%B8%D0%BE%D1%82%D0%B5%D0%BA%D0%B8." target="_blank" class="w-full md:w-auto inline-flex items-center justify-center gap-3 bg-copper hover:bg-copper-bright text-navy font-bold px-8 py-4 rounded-sm transition-all shadow-lg text-lg">
+                            <i data-lucide="message-circle" class="h-6 w-6"></i> Заказать в WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Books Search Bar -->
+                <div class="mb-8 max-w-2xl mx-auto">
+                    <div class="relative group">
+                        <i data-lucide="search" class="absolute left-4 top-1/2 transform -translate-y-1/2 text-copper h-6 w-6 group-focus-within:text-copper-bright transition-colors"></i>
+                        <input type="text" id="books-search-input" onkeyup="filterBooks()" placeholder="Поиск по автору, названию..." class="w-full bg-navy/80 border-2 border-copper/40 rounded-sm py-4 pl-14 pr-4 text-paper placeholder-paper/50 focus:outline-none focus:border-copper-bright focus:ring-1 focus:ring-copper-bright transition-all shadow-inner text-lg backdrop-blur-sm">
+                    </div>
+                </div>
+                <div id="books-no-results" class="hidden text-center text-paper/70 mb-12 text-xl font-light">
+                    По вашему запросу ничего не найдено...
+                </div>
+
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Book 1 -->
                     <div class="glass-panel p-8 rounded-sm border-l-4 border-copper flex flex-col hover:border-copper-bright transition-colors shadow-lg">
@@ -504,6 +536,62 @@
 
                     <!-- Book 3 -->
                     <div class="glass-panel p-8 rounded-sm border-l-4 border-copper flex flex-col hover:border-copper-bright transition-colors shadow-lg">
+                        <img src="tony_white_book.png" alt="Подростки, гнев и что делать" class="w-full h-auto mb-6 rounded-sm shadow-md object-contain max-h-64">
+                        <div class="flex items-center gap-4 mb-4">
+                            <i data-lucide="book" class="h-8 w-8 text-copper shrink-0"></i>
+                            <h3 class="text-xl font-bold text-paper leading-tight">Подростки, гнев и что делать</h3>
+                        </div>
+                        <p class="text-copper-bright text-sm uppercase tracking-widest font-bold mb-4">Тони Вайт</p>
+                        <p class="text-paper/90 font-light text-lg leading-relaxed flex-grow">Практическое руководство по работе с подростками и управлению их гневом с помощью методов транзактного анализа.</p>
+                    </div>
+
+                    <!-- Book 4 -->
+                    <div class="glass-panel p-8 rounded-sm border-l-4 border-copper flex flex-col hover:border-copper-bright transition-colors shadow-lg">
+                        <img src="money_book.png" alt="Деньги" class="w-full h-auto mb-6 rounded-sm shadow-md object-contain max-h-64">
+                        <div class="flex items-center gap-4 mb-4">
+                            <i data-lucide="book" class="h-8 w-8 text-copper shrink-0"></i>
+                            <h3 class="text-xl font-bold text-paper leading-tight">Деньги</h3>
+                        </div>
+                        <p class="text-copper-bright text-sm uppercase tracking-widest font-bold mb-4">А. Фернам, М. Аргайл</p>
+                        <p class="text-paper/90 font-light text-lg leading-relaxed flex-grow">Секреты психологии денег и финансового поведения. Приносят ли деньги счастье? Как связаны деньги и власть?</p>
+                    </div>
+
+                    <!-- Book 5 -->
+                    <div class="glass-panel p-8 rounded-sm border-l-4 border-copper flex flex-col hover:border-copper-bright transition-colors shadow-lg">
+                        <img src="cycles_book.png" alt="Циклы силы" class="w-full h-auto mb-6 rounded-sm shadow-md object-contain max-h-64">
+                        <div class="flex items-center gap-4 mb-4">
+                            <i data-lucide="book" class="h-8 w-8 text-copper shrink-0"></i>
+                            <h3 class="text-xl font-bold text-paper leading-tight">Циклы силы</h3>
+                        </div>
+                        <p class="text-copper-bright text-sm uppercase tracking-widest font-bold mb-4">Памела Левин</p>
+                        <p class="text-paper/90 font-light text-lg leading-relaxed flex-grow">Стадии развития ребенка и человека. Глубокий взгляд на циклы нашего развития и формирование личности.</p>
+                    </div>
+
+                    <!-- Book 6 -->
+                    <div class="glass-panel p-8 rounded-sm border-l-4 border-copper flex flex-col hover:border-copper-bright transition-colors shadow-lg">
+                        <img src="this_is_me_book.png" alt="Это я!" class="w-full h-auto mb-6 rounded-sm shadow-md object-contain max-h-64">
+                        <div class="flex items-center gap-4 mb-4">
+                            <i data-lucide="book" class="h-8 w-8 text-copper shrink-0"></i>
+                            <h3 class="text-xl font-bold text-paper leading-tight">Это я!</h3>
+                        </div>
+                        <p class="text-copper-bright text-sm uppercase tracking-widest font-bold mb-4">Лиуве Купманс</p>
+                        <p class="text-paper/90 font-light text-lg leading-relaxed flex-grow">Стань самим собой с помощью транзактного анализа. Практическое руководство по самопознанию.</p>
+                    </div>
+
+                    <!-- Book 7 -->
+                    <div class="glass-panel p-8 rounded-sm border-l-4 border-copper flex flex-col hover:border-copper-bright transition-colors shadow-lg">
+                        <img src="inner_child_book.png" alt="Внутренний ребенок" class="w-full h-auto mb-6 rounded-sm shadow-md object-contain max-h-64">
+                        <div class="flex items-center gap-4 mb-4">
+                            <i data-lucide="book" class="h-8 w-8 text-copper shrink-0"></i>
+                            <h3 class="text-xl font-bold text-paper leading-tight">Внутренний ребенок</h3>
+                        </div>
+                        <p class="text-copper-bright text-sm uppercase tracking-widest font-bold mb-4">Чарльз Уитфилд</p>
+                        <p class="text-paper/90 font-light text-lg leading-relaxed flex-grow">Как исцелить детские травмы и обрести гармонию с собой. Мировой бестселлер по психотерапии.</p>
+                    </div>
+
+
+                    
+                    <div class="glass-panel p-8 rounded-sm border-l-4 border-copper flex flex-col hover:border-copper-bright transition-colors shadow-lg">
                         <img src="1783698705.png" alt="Транзактный анализ: 100 ключевых понятий" class="w-full h-auto mb-6 rounded-sm shadow-md object-contain max-h-64">
                         <div class="flex items-center gap-4 mb-4">
                             <i data-lucide="book" class="h-8 w-8 text-copper shrink-0"></i>
@@ -513,7 +601,7 @@
                         <p class="text-paper/90 font-light text-lg leading-relaxed flex-grow">Удобный справочник, предлагающий ясный и структурированный обзор основных концепций и методов транзактного анализа.</p>
                     </div>
 
-                    <!-- Book 4 -->
+                    
                     <div class="glass-panel p-8 rounded-sm border-l-4 border-copper flex flex-col hover:border-copper-bright transition-colors shadow-lg">
                         <img src="shtainer.jpg.png" alt="Прощание с Карнеги" class="w-full h-auto mb-6 rounded-sm shadow-md object-contain max-h-64">
                         <div class="flex items-center gap-4 mb-4">
@@ -524,7 +612,7 @@
                         <p class="text-paper/90 font-light text-lg leading-relaxed flex-grow">Научный бестселлер, исследующий игры, в которые играют люди ради власти и контроля, и предлагающий пути освобождения.</p>
                     </div>
 
-                    <!-- Book 5 -->
+                    
                     <div class="glass-panel p-8 rounded-sm border-l-4 border-copper flex flex-col hover:border-copper-bright transition-colors shadow-lg">
                         <img src="gregori.jpg.png" alt="Три пути к автономии и самоактуализации" class="w-full h-auto mb-6 rounded-sm shadow-md object-contain max-h-64">
                         <div class="flex items-center gap-4 mb-4">
@@ -535,7 +623,7 @@
                         <p class="text-paper/90 font-light text-lg leading-relaxed flex-grow">В книге исследуются приобретённые и унаследованные системы убеждений и то, как они мешают достигать глубин сознания, мечтаний и целей. Автор предлагает рассматривать духовность как глубокую личную связь с самим собой, высшим сознанием и всеобщим квантовым полем.</p>
                     </div>
 
-                    <!-- Book 6 -->
+                    
                     <div class="glass-panel p-8 rounded-sm border-l-4 border-copper flex flex-col hover:border-copper-bright transition-colors shadow-lg">
                         <img src="1784032064.png" alt="Жизнь свободная от игр" class="w-full h-auto mb-6 rounded-sm shadow-md object-contain max-h-64">
                         <div class="flex items-center gap-4 mb-4">
@@ -644,7 +732,240 @@
                         <p class="text-copper-bright text-sm uppercase tracking-widest font-bold mb-4">Скотт Келлогг</p>
                         <p class="text-paper/90 font-light text-lg leading-relaxed flex-grow">В издании рассматривается метод «пустого стула» и практическое руководство по его применению для решения разнообразных клинических проблем. Психотерапевтические диалоги в клинической практике.</p>
                     </div>
+                
+                    <!-- Book 8 -->
+                    <div class="glass-panel p-8 rounded-sm border-l-4 border-copper flex flex-col hover:border-copper-bright transition-colors shadow-lg">
+                        <img src="steiner_book.png" alt="Эмоциональная грамотность" class="w-full h-auto mb-6 rounded-sm shadow-md object-contain max-h-64">
+                        <div class="flex items-center gap-4 mb-4">
+                            <i data-lucide="book" class="h-8 w-8 text-copper shrink-0"></i>
+                            <h3 class="text-xl font-bold text-paper leading-tight">Эмоциональная грамотность: интеллект с сердцем</h3>
+                        </div>
+                        <p class="text-copper-bright text-sm uppercase tracking-widest font-bold mb-4">Клод Штайнер</p>
+                        <p class="text-paper/90 font-light text-lg leading-relaxed flex-grow">Руководство по улучшению личных и профессиональных отношений. Классика транзактного анализа от создателя теории сценариев.</p>
+                    </div>
+
+                    <!-- Book 9 -->
+                    <div class="glass-panel p-8 rounded-sm border-l-4 border-copper flex flex-col hover:border-copper-bright transition-colors shadow-lg">
+                        <img src="berne_hello_book.png" alt="Что вы говорите после того, как сказали ПРИВЕТ" class="w-full h-auto mb-6 rounded-sm shadow-md object-contain max-h-64">
+                        <div class="flex items-center gap-4 mb-4">
+                            <i data-lucide="book" class="h-8 w-8 text-copper shrink-0"></i>
+                            <h3 class="text-xl font-bold text-paper leading-tight">Что вы говорите после того, как сказали "ПРИВЕТ"?</h3>
+                        </div>
+                        <p class="text-copper-bright text-sm uppercase tracking-widest font-bold mb-4">Эрик Берн</p>
+                        <p class="text-paper/90 font-light text-lg leading-relaxed flex-grow">Психология человеческой судьбы. Фундаментальный труд основателя ТА о жизненных сценариях, которые мы пишем в раннем детстве.</p>
+                    </div>
+                
+                    <!-- Book 10 -->
+                    <div class="glass-panel p-8 rounded-sm border-l-4 border-copper flex flex-col hover:border-copper-bright transition-colors shadow-lg">
+                        <img src="book_moskalenko.png" alt="У меня свой сценарий" class="w-full h-auto mb-6 rounded-sm shadow-md object-contain max-h-64">
+                        <div class="flex items-center gap-4 mb-4">
+                            <i data-lucide="book" class="h-8 w-8 text-copper shrink-0"></i>
+                            <h3 class="text-xl font-bold text-paper leading-tight">У меня свой сценарий</h3>
+                        </div>
+                        <p class="text-copper-bright text-sm uppercase tracking-widest font-bold mb-4">Валентина Москаленко</p>
+                        <p class="text-paper/90 font-light text-lg leading-relaxed flex-grow">Как сделать свою семью счастливой. Практическое руководство по работе с семейными сценариями и преодолению разрушительных паттернов.</p>
+                    </div>
+
+                    <!-- Book 11 -->
+                    <div class="glass-panel p-8 rounded-sm border-l-4 border-copper flex flex-col hover:border-copper-bright transition-colors shadow-lg">
+                        <img src="book_malkina.png" alt="Техники транзактного анализа и психосинтеза" class="w-full h-auto mb-6 rounded-sm shadow-md object-contain max-h-64">
+                        <div class="flex items-center gap-4 mb-4">
+                            <i data-lucide="book" class="h-8 w-8 text-copper shrink-0"></i>
+                            <h3 class="text-xl font-bold text-paper leading-tight">Техники транзактного анализа и психосинтеза</h3>
+                        </div>
+                        <p class="text-copper-bright text-sm uppercase tracking-widest font-bold mb-4">И. Г. Малкина-Пых</p>
+                        <p class="text-paper/90 font-light text-lg leading-relaxed flex-grow">Справочник практического психолога. Подробное описание методов и техник для эффективной терапевтической работы.</p>
+                    </div>
+
+                    <!-- Book 12 -->
+                    <div class="glass-panel p-8 rounded-sm border-l-4 border-copper flex flex-col hover:border-copper-bright transition-colors shadow-lg">
+                        <img src="book_white_character.png" alt="Терапия характера" class="w-full h-auto mb-6 rounded-sm shadow-md object-contain max-h-64">
+                        <div class="flex items-center gap-4 mb-4">
+                            <i data-lucide="book" class="h-8 w-8 text-copper shrink-0"></i>
+                            <h3 class="text-xl font-bold text-paper leading-tight">Терапия характера</h3>
+                        </div>
+                        <p class="text-copper-bright text-sm uppercase tracking-widest font-bold mb-4">Тони Вайт</p>
+                        <p class="text-paper/90 font-light text-lg leading-relaxed flex-grow">Концепция природы характера. Психологическая сепарация и терапия. Важный труд для понимания глубинных структур личности.</p>
+                    </div>
+
+                    <!-- Book 13 -->
+                    <div class="glass-panel p-8 rounded-sm border-l-4 border-copper flex flex-col hover:border-copper-bright transition-colors shadow-lg">
+                        <img src="book_white_feelings.png" alt="Творческие чувства" class="w-full h-auto mb-6 rounded-sm shadow-md object-contain max-h-64">
+                        <div class="flex items-center gap-4 mb-4">
+                            <i data-lucide="book" class="h-8 w-8 text-copper shrink-0"></i>
+                            <h3 class="text-xl font-bold text-paper leading-tight">Творческие чувства</h3>
+                        </div>
+                        <p class="text-copper-bright text-sm uppercase tracking-widest font-bold mb-4">Тони Вайт</p>
+                        <p class="text-paper/90 font-light text-lg leading-relaxed flex-grow">Глубокое исследование эмоциональной сферы человека через призму транзактного анализа. Работа с истинными и рэкетными чувствами.</p>
+                    </div>
+
+                    <!-- Book 14 -->
+                    <div class="glass-panel p-8 rounded-sm border-l-4 border-copper flex flex-col hover:border-copper-bright transition-colors shadow-lg">
+                        <img src="book_steiner_scripts.png" alt="Сценарии жизни людей" class="w-full h-auto mb-6 rounded-sm shadow-md object-contain max-h-64">
+                        <div class="flex items-center gap-4 mb-4">
+                            <i data-lucide="book" class="h-8 w-8 text-copper shrink-0"></i>
+                            <h3 class="text-xl font-bold text-paper leading-tight">Сценарии жизни людей. Школа Эрика Берна</h3>
+                        </div>
+                        <p class="text-copper-bright text-sm uppercase tracking-widest font-bold mb-4">Клод Штайнер</p>
+                        <p class="text-paper/90 font-light text-lg leading-relaxed flex-grow">Классическая работа о формировании жизненных сценариев и методах их изменения для достижения автономии и счастья.</p>
+                    </div>
+                
+                    <!-- Book 15 -->
+                    <div class="glass-panel p-8 rounded-sm border-l-4 border-copper flex flex-col hover:border-copper-bright transition-colors shadow-lg">
+                        <img src="book_english.png" alt="Самореализация на протяжении всей жизни" class="w-full h-auto mb-6 rounded-sm shadow-md object-contain max-h-64">
+                        <div class="flex items-center gap-4 mb-4">
+                            <i data-lucide="book" class="h-8 w-8 text-copper shrink-0"></i>
+                            <h3 class="text-xl font-bold text-paper leading-tight">Самореализация на протяжении всей жизни</h3>
+                        </div>
+                        <p class="text-copper-bright text-sm uppercase tracking-widest font-bold mb-4">Фанита Инглиш</p>
+                        <p class="text-paper/90 font-light text-lg leading-relaxed flex-grow">Путешествие в самую суть Транзактного Анализа. Уникальный взгляд на развитие личности и достижение самореализации на всех этапах жизни.</p>
+                    </div>
+
+                    <!-- Book 16 -->
+                    <div class="glass-panel p-8 rounded-sm border-l-4 border-copper flex flex-col hover:border-copper-bright transition-colors shadow-lg">
+                        <img src="book_stewart.png" alt="Современный транзактный анализ" class="w-full h-auto mb-6 rounded-sm shadow-md object-contain max-h-64">
+                        <div class="flex items-center gap-4 mb-4">
+                            <i data-lucide="book" class="h-8 w-8 text-copper shrink-0"></i>
+                            <h3 class="text-xl font-bold text-paper leading-tight">Современный транзактный анализ</h3>
+                        </div>
+                        <p class="text-copper-bright text-sm uppercase tracking-widest font-bold mb-4">Иан Стюарт, Вэнн Джойнс</p>
+                        <p class="text-paper/90 font-light text-lg leading-relaxed flex-grow">Базовый и самый популярный учебник по ТА. Второе издание, расширенное и переработанное. Незаменимое пособие для студентов и практиков.</p>
+                    </div>
+
+                    <!-- Book 17 -->
+                    <div class="glass-panel p-8 rounded-sm border-l-4 border-copper flex flex-col hover:border-copper-bright transition-colors shadow-lg">
+                        <img src="book_white_suicide.png" alt="Работа с суицидальными личностями" class="w-full h-auto mb-6 rounded-sm shadow-md object-contain max-h-64">
+                        <div class="flex items-center gap-4 mb-4">
+                            <i data-lucide="book" class="h-8 w-8 text-copper shrink-0"></i>
+                            <h3 class="text-xl font-bold text-paper leading-tight">Работа с суицидальными личностями</h3>
+                        </div>
+                        <p class="text-copper-bright text-sm uppercase tracking-widest font-bold mb-4">Тони Вайт</p>
+                        <p class="text-paper/90 font-light text-lg leading-relaxed flex-grow">Руководство к пониманию, оценке и поддержке. Книга удостоена премии Британской Медицинской Ассоциации.</p>
+                    </div>
+
+                    <!-- Book 18 -->
+                    <div class="glass-panel p-8 rounded-sm border-l-4 border-copper flex flex-col hover:border-copper-bright transition-colors shadow-lg">
+                        <img src="book_goulding.png" alt="Психотерапия Нового Решения" class="w-full h-auto mb-6 rounded-sm shadow-md object-contain max-h-64">
+                        <div class="flex items-center gap-4 mb-4">
+                            <i data-lucide="book" class="h-8 w-8 text-copper shrink-0"></i>
+                            <h3 class="text-xl font-bold text-paper leading-tight">Психотерапия Нового Решения</h3>
+                        </div>
+                        <p class="text-copper-bright text-sm uppercase tracking-widest font-bold mb-4">Роберт Гулдинг, Мэри Гулдинг</p>
+                        <p class="text-paper/90 font-light text-lg leading-relaxed flex-grow">Основы трансактного анализа. Практическое руководство по методу перерешения, позволяющему клиентам изменить свои ранние негативные решения.</p>
+                    </div>
+                
+                    <!-- Book 19 -->
+                    <div class="glass-panel p-8 rounded-sm border-l-4 border-copper flex flex-col hover:border-copper-bright transition-colors shadow-lg">
+                        <img src="book_shustov_clinical.png" alt="Руководство по клиническому трансактному анализу" class="w-full h-auto mb-6 rounded-sm shadow-md object-contain max-h-64">
+                        <div class="flex items-center gap-4 mb-4">
+                            <i data-lucide="book" class="h-8 w-8 text-copper shrink-0"></i>
+                            <h3 class="text-xl font-bold text-paper leading-tight">Руководство по клиническому трансактному анализу</h3>
+                        </div>
+                        <p class="text-copper-bright text-sm uppercase tracking-widest font-bold mb-4">Дмитрий Шустов</p>
+                        <p class="text-paper/90 font-light text-lg leading-relaxed flex-grow">Современная психотерапия. Подробное клиническое руководство для специалистов.</p>
+                    </div>
+
+                    <!-- Book 20 -->
+                    <div class="glass-panel p-8 rounded-sm border-l-4 border-copper flex flex-col hover:border-copper-bright transition-colors shadow-lg">
+                        <img src="book_bowlby.png" alt="Создание и разрушение эмоциональных связей" class="w-full h-auto mb-6 rounded-sm shadow-md object-contain max-h-64">
+                        <div class="flex items-center gap-4 mb-4">
+                            <i data-lucide="book" class="h-8 w-8 text-copper shrink-0"></i>
+                            <h3 class="text-xl font-bold text-paper leading-tight">Создание и разрушение эмоциональных связей</h3>
+                        </div>
+                        <p class="text-copper-bright text-sm uppercase tracking-widest font-bold mb-4">Джон Боулби</p>
+                        <p class="text-paper/90 font-light text-lg leading-relaxed flex-grow">Классический труд создателя теории привязанности о психологии глубинных отношений.</p>
+                    </div>
+
+                    <!-- Book 21 -->
+                    <div class="glass-panel p-8 rounded-sm border-l-4 border-copper flex flex-col hover:border-copper-bright transition-colors shadow-lg">
+                        <img src="book_shustov_alcohol.png" alt="Психотерапия алкогольной зависимости" class="w-full h-auto mb-6 rounded-sm shadow-md object-contain max-h-64">
+                        <div class="flex items-center gap-4 mb-4">
+                            <i data-lucide="book" class="h-8 w-8 text-copper shrink-0"></i>
+                            <h3 class="text-xl font-bold text-paper leading-tight">Психотерапия алкогольной зависимости</h3>
+                        </div>
+                        <p class="text-copper-bright text-sm uppercase tracking-widest font-bold mb-4">Д. И. Шустов, О. Д. Тучина</p>
+                        <p class="text-paper/90 font-light text-lg leading-relaxed flex-grow">Руководство для врачей по применению методов транзактного анализа при лечении зависимостей.</p>
+                    </div>
+
+                    <!-- Book 22 -->
+                    <div class="glass-panel p-8 rounded-sm border-l-4 border-copper flex flex-col hover:border-copper-bright transition-colors shadow-lg">
+                        <img src="book_white_alive.png" alt="Остаться в живых" class="w-full h-auto mb-6 rounded-sm shadow-md object-contain max-h-64">
+                        <div class="flex items-center gap-4 mb-4">
+                            <i data-lucide="book" class="h-8 w-8 text-copper shrink-0"></i>
+                            <h3 class="text-xl font-bold text-paper leading-tight">Остаться в живых</h3>
+                        </div>
+                        <p class="text-copper-bright text-sm uppercase tracking-widest font-bold mb-4">Тони Вайт</p>
+                        <p class="text-paper/90 font-light text-lg leading-relaxed flex-grow">Руководство по Антисуицидальному контракту. Практическое пособие для терапевтов.</p>
+                    </div>
+
+                    <!-- Book 23 -->
+                    <div class="glass-panel p-8 rounded-sm border-l-4 border-copper flex flex-col hover:border-copper-bright transition-colors shadow-lg">
+                        <img src="book_joines_adaptations.png" alt="Личностные адаптации" class="w-full h-auto mb-6 rounded-sm shadow-md object-contain max-h-64">
+                        <div class="flex items-center gap-4 mb-4">
+                            <i data-lucide="book" class="h-8 w-8 text-copper shrink-0"></i>
+                            <h3 class="text-xl font-bold text-paper leading-tight">Личностные адаптации</h3>
+                        </div>
+                        <p class="text-copper-bright text-sm uppercase tracking-widest font-bold mb-4">Вэнн Джойнс, Иан Стюарт</p>
+                        <p class="text-paper/90 font-light text-lg leading-relaxed flex-grow">Новое пособие для понимания человека в психотерапии и консультировании.</p>
+                    </div>
+                
+                    <!-- Book 24 -->
+                    <div class="glass-panel p-8 rounded-sm border-l-4 border-copper flex flex-col hover:border-copper-bright transition-colors shadow-lg">
+                        <img src="book_berne_games.png" alt="Игры, в которые играют люди. Люди, которые играют в игры" class="w-full h-auto mb-6 rounded-sm shadow-md object-contain max-h-64">
+                        <div class="flex items-center gap-4 mb-4">
+                            <i data-lucide="book" class="h-8 w-8 text-copper shrink-0"></i>
+                            <h3 class="text-xl font-bold text-paper leading-tight">Игры, в которые играют люди. Люди, которые играют в игры</h3>
+                        </div>
+                        <p class="text-copper-bright text-sm uppercase tracking-widest font-bold mb-4">Эрик Берн</p>
+                        <p class="text-paper/90 font-light text-lg leading-relaxed flex-grow">Классическая книга, описывающая теорию транзактного анализа и сценарии человеческого поведения.</p>
+                    </div>
+
+                    <!-- Book 25 -->
+                    <div class="glass-panel p-8 rounded-sm border-l-4 border-copper flex flex-col hover:border-copper-bright transition-colors shadow-lg">
+                        <img src="book_steiner_alcoholics.png" alt="Игры, в которые играют алкоголики" class="w-full h-auto mb-6 rounded-sm shadow-md object-contain max-h-64">
+                        <div class="flex items-center gap-4 mb-4">
+                            <i data-lucide="book" class="h-8 w-8 text-copper shrink-0"></i>
+                            <h3 class="text-xl font-bold text-paper leading-tight">Игры, в которые играют алкоголики</h3>
+                        </div>
+                        <p class="text-copper-bright text-sm uppercase tracking-widest font-bold mb-4">Клод Штайнер</p>
+                        <p class="text-paper/90 font-light text-lg leading-relaxed flex-grow">Глубокое исследование психологии зависимости через призму транзактного анализа.</p>
+                    </div>
+
+                    <!-- Book 26 -->
+                    <div class="glass-panel p-8 rounded-sm border-l-4 border-copper flex flex-col hover:border-copper-bright transition-colors shadow-lg">
+                        <img src="book_berne_group.png" alt="Групповая психотерапия" class="w-full h-auto mb-6 rounded-sm shadow-md object-contain max-h-64">
+                        <div class="flex items-center gap-4 mb-4">
+                            <i data-lucide="book" class="h-8 w-8 text-copper shrink-0"></i>
+                            <h3 class="text-xl font-bold text-paper leading-tight">Групповая психотерапия</h3>
+                        </div>
+                        <p class="text-copper-bright text-sm uppercase tracking-widest font-bold mb-4">Эрик Берн</p>
+                        <p class="text-paper/90 font-light text-lg leading-relaxed flex-grow">Основы применения транзактного анализа в групповой терапевтической работе.</p>
+                    </div>
+
+                    <!-- Book 27 -->
+                    <div class="glass-panel p-8 rounded-sm border-l-4 border-copper flex flex-col hover:border-copper-bright transition-colors shadow-lg">
+                        <img src="book_murray_prisoner.png" alt="Узник иной войны" class="w-full h-auto mb-6 rounded-sm shadow-md object-contain max-h-64">
+                        <div class="flex items-center gap-4 mb-4">
+                            <i data-lucide="book" class="h-8 w-8 text-copper shrink-0"></i>
+                            <h3 class="text-xl font-bold text-paper leading-tight">Узник иной войны</h3>
+                        </div>
+                        <p class="text-copper-bright text-sm uppercase tracking-widest font-bold mb-4">Мэрилин Мюррей</p>
+                        <p class="text-paper/90 font-light text-lg leading-relaxed flex-grow">Удивительная история исцеления детской травмы. Важный труд для понимания процесса работы с травмой.</p>
+                    </div>
+
+                    <!-- Book 28 -->
+                    <div class="glass-panel p-8 rounded-sm border-l-4 border-copper flex flex-col hover:border-copper-bright transition-colors shadow-lg">
+                        <img src="book_berne_games_white.png" alt="Игры, в которые играют люди" class="w-full h-auto mb-6 rounded-sm shadow-md object-contain max-h-64">
+                        <div class="flex items-center gap-4 mb-4">
+                            <i data-lucide="book" class="h-8 w-8 text-copper shrink-0"></i>
+                            <h3 class="text-xl font-bold text-paper leading-tight">Игры, в которые играют люди</h3>
+                        </div>
+                        <p class="text-copper-bright text-sm uppercase tracking-widest font-bold mb-4">Эрик Берн</p>
+                        <p class="text-paper/90 font-light text-lg leading-relaxed flex-grow">Бестселлер по психологии человеческих взаимоотношений, перевернувший представление о коммуникации.</p>
+                    </div>
                 </div>
+
+                
 
                 <div class="mt-16 text-center"><button onclick="showPage('home-view')" class="px-10 py-4 border border-copper text-copper-bright hover:bg-copper/10 rounded-full transition-all shadow-lg"><i data-lucide="arrow-left" class="mr-2 h-5 w-5 inline"></i> Вернуться на главную</button></div>
             </div>
@@ -2842,6 +3163,32 @@
             selectStream('sep30');
             lucide.createIcons();
         });
-    </script>
+    
+// --- Books Filter Function ---
+function filterBooks() {
+    const query = document.getElementById('books-search-input').value.toLowerCase();
+    const books = document.querySelectorAll('#books-view .grid > .glass-panel');
+    let hasVisibleBooks = false;
+
+    books.forEach(book => {
+        // Collect all text from the book card
+        const textContent = book.textContent.toLowerCase();
+        
+        if (textContent.includes(query)) {
+            book.style.display = 'flex'; // maintain the flex-col layout
+            hasVisibleBooks = true;
+        } else {
+            book.style.display = 'none';
+        }
+    });
+
+    const noResultsMsg = document.getElementById('books-no-results');
+    if (hasVisibleBooks) {
+        noResultsMsg.classList.add('hidden');
+    } else {
+        noResultsMsg.classList.remove('hidden');
+    }
+}
+</script>
 </body>
 </html>
