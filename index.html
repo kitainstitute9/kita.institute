@@ -14,6 +14,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
+            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
@@ -54,7 +55,824 @@
         #books-view .glass-panel { perspective: 1000px; }
         #books-view .glass-panel img { transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1); transform-style: preserve-3d; transform-origin: left center; }
         #books-view .glass-panel:hover img { transform: scale(1.05) rotateY(-15deg) rotateX(2deg); filter: drop-shadow(15px 15px 15px rgba(0,0,0,0.5)) drop-shadow(-5px 5px 15px rgba(179,106,40,0.3)); }
-    </style>
+    
+                /* ============================================================== */
+        /* СОВРЕМЕННАЯ ЧИСТАЯ СВЕТЛАЯ ТЕМА (ФИРМЕННЫЙ СТИЛЬ КИТА)         */
+        /* БЕЛЫЙ И СВЕТЛЫЙ ФОН (#ffffff / #f8fafc) + ТЁМНЫЙ КОНТРАСТНЫЙ ТЕКСТ */
+        /* ОСНОВНЫЕ ЦВЕТА: ТЁМНО-СИНИЙ (#081224), ТЁМНО-БОРДОВЫЙ (#4a1118) */
+        /* ============================================================== */
+
+        /* 1. БАЗОВЫЙ ФОН И ТЕКСТ САЙТА */
+        html.theme-light,
+        html.theme-warm,
+        html.theme-light body,
+        html.theme-warm body {
+            background-color: #f8fafc !important; /* чистый светлый фон */
+            color: #081224 !important;
+        }
+
+        /* 2. ШАПКА САЙТА (HEADER) */
+        html.theme-light header,
+        html.theme-warm header {
+            background-color: rgba(255, 255, 255, 0.98) !important;
+            border-bottom: 1.5px solid #e2e8f0 !important;
+            box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05) !important;
+        }
+        html.theme-light header a h1,
+        html.theme-warm header a h1 { color: #4a1118 !important; }
+        html.theme-light header a p,
+        html.theme-warm header a p { color: #081224 !important; }
+        html.theme-light header nav a,
+        html.theme-warm header nav a {
+            color: #081224 !important;
+            font-weight: 600 !important;
+        }
+        html.theme-light header nav a:hover,
+        html.theme-warm header nav a:hover { color: #4a1118 !important; }
+        
+        /* Выпадающие меню */
+        html.theme-light header .bg-navy,
+        html.theme-warm header .bg-navy {
+            background-color: #ffffff !important;
+            border: 1.5px solid #4a1118 !important;
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.1) !important;
+        }
+        html.theme-light header .bg-navy a,
+        html.theme-warm header .bg-navy a {
+            color: #081224 !important;
+            border-bottom-color: #f1f5f9 !important;
+        }
+        html.theme-light header .bg-navy a:hover,
+        html.theme-warm header .bg-navy a:hover {
+            background-color: #f8fafc !important;
+            color: #4a1118 !important;
+        }
+
+        /* Мобильное меню */
+        html.theme-light #mobile-menu,
+        html.theme-warm #mobile-menu {
+            background-color: #ffffff !important;
+            border-top: 2px solid #4a1118 !important;
+        }
+        html.theme-light #mobile-menu a,
+        html.theme-light #mobile-menu div,
+        html.theme-warm #mobile-menu a,
+        html.theme-warm #mobile-menu div { color: #081224 !important; }
+        html.theme-light #mobile-menu .text-copper-bright,
+        html.theme-warm #mobile-menu .text-copper-bright { color: #4a1118 !important; }
+
+        /* 3. КАРТОЧКИ И БЛОКИ — ВСЕ СВЕТЛЫЕ */
+        html.theme-light .glass-panel,
+        html.theme-light .worn-burgundy,
+        html.theme-light .bg-navy,
+        html.theme-light .bg-navy\/95,
+        html.theme-light .bg-navy\/90,
+        html.theme-light .bg-navy\/80,
+        html.theme-light .bg-navy\/60,
+        html.theme-light .bg-navy\/50,
+        html.theme-light .bg-navy\/40,
+        html.theme-light .bg-navy-light,
+        html.theme-light .bg-navy-deep,
+        html.theme-light div[class*="bg-navy"],
+        html.theme-warm .glass-panel,
+        html.theme-warm .worn-burgundy,
+        html.theme-warm .bg-navy,
+        html.theme-warm .bg-navy\/95,
+        html.theme-warm .bg-navy\/90,
+        html.theme-warm .bg-navy\/80,
+        html.theme-warm .bg-navy\/60,
+        html.theme-warm .bg-navy\/50,
+        html.theme-warm .bg-navy\/40,
+        html.theme-warm .bg-navy-light,
+        html.theme-warm .bg-navy-deep,
+        html.theme-warm div[class*="bg-navy"] {
+            background-color: #ffffff !important;
+            border-color: #e2e8f0 !important;
+            box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05) !important;
+        }
+
+        /* Выразительные рамки карточек: бордовые и синие */
+        html.theme-light .glass-panel,
+        html.theme-light .worn-burgundy,
+        html.theme-warm .glass-panel,
+        html.theme-warm .worn-burgundy {
+            border: 1.5px solid rgba(74, 17, 24, 0.35) !important;
+        }
+        html.theme-light .border-copper,
+        html.theme-light .border-copper\/50,
+        html.theme-light .border-copper\/40,
+        html.theme-light .border-copper\/30,
+        html.theme-light .border-copper\/20,
+        html.theme-warm .border-copper,
+        html.theme-warm .border-copper\/50,
+        html.theme-warm .border-copper\/40,
+        html.theme-warm .border-copper\/30,
+        html.theme-warm .border-copper\/20 {
+            border-color: rgba(74, 17, 24, 0.3) !important;
+        }
+        html.theme-light .border-l-4.border-copper,
+        html.theme-light .border-l-2.border-copper,
+        html.theme-warm .border-l-4.border-copper,
+        html.theme-warm .border-l-2.border-copper {
+            border-left-color: #4a1118 !important;
+        }
+        html.theme-light .border-l-4.border-burgundy,
+        html.theme-light .border-l-2.border-burgundy,
+        html.theme-warm .border-l-4.border-burgundy,
+        html.theme-warm .border-l-2.border-burgundy {
+            border-left-color: #081224 !important;
+        }
+        html.theme-light .border-t-2.border-copper,
+        html.theme-warm .border-t-2.border-copper {
+            border-top-color: #4a1118 !important;
+        }
+
+        /* 4. РАЗДЕЛИТЕЛЬНЫЕ ЛИНИИ */
+        html.theme-light .w-32.h-1,
+        html.theme-warm .w-32.h-1 {
+            background-color: #4a1118 !important;
+            opacity: 0.85 !important;
+        }
+
+        /* 5. ФОТОГРАФИИ: ИРИНА, СПЕЦИАЛИСТЫ, КНИГИ, ОТЗЫВЫ (100% ВИДИМОСТЬ!) */
+        html.theme-light img,
+        html.theme-light [data-img="irina"],
+        html.theme-light img[src*="irina"],
+        html.theme-light img[src*="natalya"],
+        html.theme-light [data-img*="psycholog"],
+        html.theme-light #psychologta-view img,
+        html.theme-light .smart-img,
+        html.theme-light #books-view img,
+        html.theme-light #reviews-carousel img,
+        html.theme-warm img,
+        html.theme-warm [data-img="irina"],
+        html.theme-warm img[src*="irina"],
+        html.theme-warm img[src*="natalya"],
+        html.theme-warm [data-img*="psycholog"],
+        html.theme-warm #psychologta-view img,
+        html.theme-warm .smart-img,
+        html.theme-warm #books-view img,
+        html.theme-warm #reviews-carousel img {
+            opacity: 1 !important;
+            filter: none !important;
+            mix-blend-mode: normal !important;
+        }
+        html.theme-light .border-\[\#eaddc5\],
+        html.theme-warm .border-\[\#eaddc5\] {
+            border-color: #4a1118 !important;
+        }
+        html.theme-light .border-copper.transform,
+        html.theme-warm .border-copper.transform {
+            border-color: #081224 !important;
+        }
+
+        /* Фоновые иллюстрации в шапках баннеров (Курсы, Практика, История и др.) */
+        /* Плавный переход без полосок и швов (мягкая маска краев + чистый фон под текстом) */
+        .absolute.inset-0.z-0 > img,
+        .absolute.inset-0 > img.object-cover {
+            width: 100% !important;
+            height: 100% !important;
+            left: 0 !important;
+            right: 0 !important;
+            top: 0 !important;
+            bottom: 0 !important;
+            object-fit: cover !important;
+            object-position: right center !important;
+            -webkit-mask-image: linear-gradient(to right, 
+                transparent 0%, 
+                transparent 15%, 
+                rgba(0, 0, 0, 0.05) 25%, 
+                rgba(0, 0, 0, 0.3) 40%, 
+                rgba(0, 0, 0, 0.75) 55%, 
+                black 72%, 
+                black 95%, 
+                transparent 100%
+            ) !important;
+            mask-image: linear-gradient(to right, 
+                transparent 0%, 
+                transparent 15%, 
+                rgba(0, 0, 0, 0.05) 25%, 
+                rgba(0, 0, 0, 0.3) 40%, 
+                rgba(0, 0, 0, 0.75) 55%, 
+                black 72%, 
+                black 95%, 
+                transparent 100%
+            ) !important;
+            transition: opacity 0.5s ease, transform 0.8s ease !important;
+        }
+
+        .group:hover .absolute.inset-0.z-0 > img,
+        .group:hover .absolute.inset-0 > img.object-cover {
+            transform: scale(1.03) !important;
+        }
+
+        /* 1. Светлая тема: яркие сочные фотографии, чистый фон под текстом, мягкий градиент */
+        html.theme-light .absolute.inset-0.z-0 > img,
+        html.theme-light .absolute.inset-0 > img.object-cover,
+        html.theme-warm .absolute.inset-0.z-0 > img,
+        html.theme-warm .absolute.inset-0 > img.object-cover {
+            opacity: 0.85 !important; /* Яркие, сочные и выразительные фотографии */
+            mix-blend-mode: normal !important;
+            filter: contrast(1.06) saturate(1.12) brightness(1.02) !important;
+        }
+        html.theme-light .bg-gradient-to-r.from-navy,
+        html.theme-warm .bg-gradient-to-r.from-navy {
+            background: linear-gradient(to right, 
+                #ffffff 0%, 
+                #ffffff 22%, 
+                rgba(255, 255, 255, 0.85) 38%, 
+                rgba(255, 255, 255, 0.3) 55%, 
+                transparent 72%
+            ) !important;
+        }
+        html.theme-light .bg-navy\/60.md\:hidden,
+        html.theme-warm .bg-navy\/60.md\:hidden {
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.92) 0%, rgba(255, 255, 255, 0.5) 100%) !important;
+        }
+
+        /* 2. Тёмная тема: насыщенные атмосферные баннеры без полосок и резких краев */
+        html.dark .absolute.inset-0.z-0 > img,
+        html.dark .absolute.inset-0 > img.object-cover,
+        html:not(.theme-light):not(.theme-warm) .absolute.inset-0.z-0 > img,
+        html:not(.theme-light):not(.theme-warm) .absolute.inset-0 > img.object-cover {
+            opacity: 0.55 !important; /* Выразительная яркая иллюстрация в темной теме */
+            mix-blend-mode: luminosity !important;
+            filter: contrast(1.15) brightness(1.15) !important;
+        }
+        html.dark .bg-gradient-to-r.from-navy,
+        html:not(.theme-light):not(.theme-warm) .bg-gradient-to-r.from-navy {
+            background: linear-gradient(to right, 
+                #081224 0%, 
+                #081224 22%, 
+                rgba(8, 18, 36, 0.85) 38%, 
+                rgba(8, 18, 36, 0.3) 55%, 
+                transparent 72%
+            ) !important;
+        }
+
+        /* 6. ДЕКОРАТИВНЫЕ ВОДЯНЫЕ ЗНАКИ */
+        html.theme-light i.absolute[class*="-right-"],
+        html.theme-light i.absolute[class*="-bottom-"],
+        html.theme-light svg.absolute[class*="-right-"],
+        html.theme-light svg.absolute[class*="-bottom-"],
+        html.theme-light .absolute[class*="text-copper/5"],
+        html.theme-light .absolute[class*="text-black/10"],
+        html.theme-light i.absolute[class*="h-24"],
+        html.theme-light i.absolute[class*="h-32"],
+        html.theme-light i.absolute[class*="h-48"],
+        html.theme-light i.absolute[class*="h-64"],
+        html.theme-light svg.absolute[class*="h-24"],
+        html.theme-light svg.absolute[class*="h-32"],
+        html.theme-light svg.absolute[class*="h-48"],
+        html.theme-light svg.absolute[class*="h-64"],
+        html.theme-warm i.absolute[class*="-right-"],
+        html.theme-warm i.absolute[class*="-bottom-"],
+        html.theme-warm svg.absolute[class*="-right-"],
+        html.theme-warm svg.absolute[class*="-bottom-"],
+        html.theme-warm .absolute[class*="text-copper/5"],
+        html.theme-warm .absolute[class*="text-black/10"],
+        html.theme-warm i.absolute[class*="h-24"],
+        html.theme-warm i.absolute[class*="h-32"],
+        html.theme-warm i.absolute[class*="h-48"],
+        html.theme-warm i.absolute[class*="h-64"],
+        html.theme-warm svg.absolute[class*="h-24"],
+        html.theme-warm svg.absolute[class*="h-32"],
+        html.theme-warm svg.absolute[class*="h-48"],
+        html.theme-warm svg.absolute[class*="h-64"] {
+            opacity: 0.04 !important;
+            color: #4a1118 !important;
+            pointer-events: none !important;
+        }
+        html.theme-light .relative i[data-lucide="search"],
+        html.theme-light .relative svg.lucide-search,
+        html.theme-warm .relative i[data-lucide="search"],
+        html.theme-warm .relative svg.lucide-search {
+            opacity: 1 !important;
+            color: #081224 !important;
+        }
+        html.theme-light img[data-img="logo"].absolute,
+        html.theme-warm img[data-img="logo"].absolute {
+            opacity: 0.03 !important;
+            filter: grayscale(100%) !important;
+            mix-blend-mode: multiply !important;
+        }
+
+        /* 7. ТИПОГРАФИКА: СТРОГО ТЁМНЫЙ КОНТРАСТНЫЙ ТЕКСТ */
+        html.theme-light p,
+        html.theme-light li,
+        html.theme-light span:not([class*="bg-"]):not([class*="text-copper-bright"]),
+        html.theme-light .text-paper,
+        html.theme-light .text-paper\/90,
+        html.theme-light .text-paper\/80,
+        html.theme-light .text-paper-light,
+        html.theme-warm p,
+        html.theme-warm li,
+        html.theme-warm span:not([class*="bg-"]):not([class*="text-copper-bright"]),
+        html.theme-warm .text-paper,
+        html.theme-warm .text-paper\/90,
+        html.theme-warm .text-paper\/80,
+        html.theme-warm .text-paper-light {
+            color: #081224 !important;
+        }
+
+        html.theme-light .text-paper\/70,
+        html.theme-light .text-paper\/60,
+        html.theme-light .text-paper-dark,
+        html.theme-warm .text-paper\/70,
+        html.theme-warm .text-paper\/60,
+        html.theme-warm .text-paper-dark {
+            color: #334155 !important;
+        }
+
+        html.theme-light h1,
+        html.theme-light h2,
+        html.theme-light h3,
+        html.theme-light .text-copper-bright,
+        html.theme-light h2.text-copper-bright,
+        html.theme-light h3.text-copper-bright,
+        html.theme-warm h1,
+        html.theme-warm h2,
+        html.theme-warm h3,
+        html.theme-warm .text-copper-bright,
+        html.theme-warm h2.text-copper-bright,
+        html.theme-warm h3.text-copper-bright {
+            color: #4a1118 !important;
+            text-shadow: none !important;
+        }
+
+        html.theme-light h4,
+        html.theme-light h5,
+        html.theme-light .text-copper,
+        html.theme-light h4.text-copper-bright,
+        html.theme-light h5.text-copper-bright,
+        html.theme-light .font-handwriting,
+        html.theme-light [data-lucide]:not(.absolute),
+        html.theme-warm h4,
+        html.theme-warm h5,
+        html.theme-warm .text-copper,
+        html.theme-warm h4.text-copper-bright,
+        html.theme-warm h5.text-copper-bright,
+        html.theme-warm .font-handwriting,
+        html.theme-warm [data-lucide]:not(.absolute) {
+            color: #4a1118 !important;
+        }
+        html.theme-light strong,
+        html.theme-warm strong {
+            color: #4a1118 !important;
+            font-weight: 700 !important;
+        }
+
+        /* 8. СЕРТИФИКАЦИЯ И ЧАСЫ */
+        html.theme-light .bg-green-900\/30,
+        html.theme-light .bg-green-950\/80,
+        html.theme-light [class*="bg-green-"],
+        html.theme-warm .bg-green-900\/30,
+        html.theme-warm .bg-green-950\/80,
+        html.theme-warm [class*="bg-green-"] {
+            background-color: #4a1118 !important;
+            border: 1.5px solid #4a1118 !important;
+            color: #ffffff !important;
+            box-shadow: 0 4px 15px rgba(74, 17, 24, 0.25) !important;
+            font-weight: 700 !important;
+        }
+        html.theme-light .bg-green-900\/30 *,
+        html.theme-light .bg-green-950\/80 *,
+        html.theme-light [class*="bg-green-"] *,
+        html.theme-warm .bg-green-900\/30 *,
+        html.theme-warm .bg-green-950\/80 *,
+        html.theme-warm [class*="bg-green-"] * {
+            color: #ffffff !important;
+        }
+
+        html.theme-light .bg-copper\/20,
+        html.theme-warm .bg-copper\/20 {
+            background-color: #081224 !important;
+            border: 1.5px solid #081224 !important;
+            color: #ffffff !important;
+            box-shadow: 0 4px 15px rgba(8, 18, 36, 0.2) !important;
+            font-weight: 700 !important;
+        }
+        html.theme-light .bg-copper\/20 *,
+        html.theme-warm .bg-copper\/20 * {
+            color: #ffffff !important;
+        }
+
+        html.theme-light #course-detail-wings-view .bg-navy\/80.text-center,
+        html.theme-light div:has(> .inline-block [data-lucide="award"]),
+        html.theme-warm #course-detail-wings-view .bg-navy\/80.text-center,
+        html.theme-warm div:has(> .inline-block [data-lucide="award"]) {
+            background-color: #ffffff !important;
+            border: 2px solid #4a1118 !important;
+            box-shadow: 0 10px 30px rgba(74, 17, 24, 0.08) !important;
+        }
+        html.theme-light #course-detail-wings-view .bg-navy\/80.text-center p,
+        html.theme-light #course-detail-wings-view .bg-navy\/80.text-center span,
+        html.theme-warm #course-detail-wings-view .bg-navy\/80.text-center p,
+        html.theme-warm #course-detail-wings-view .bg-navy\/80.text-center span {
+            color: #081224 !important;
+        }
+        html.theme-light #course-detail-wings-view .bg-navy\/80.text-center .text-copper-bright,
+        html.theme-warm #course-detail-wings-view .bg-navy\/80.text-center .text-copper-bright {
+            color: #4a1118 !important;
+            font-weight: 800 !important;
+        }
+
+        html.theme-light #supervision-group-view .grid .bg-navy\/50,
+        html.theme-warm #supervision-group-view .grid .bg-navy\/50 {
+            background-color: #ffffff !important;
+            border: 2px solid #081224 !important;
+            box-shadow: 0 4px 15px rgba(8, 18, 36, 0.06) !important;
+        }
+        html.theme-light #supervision-group-view .grid .bg-navy\/50 span,
+        html.theme-warm #supervision-group-view .grid .bg-navy\/50 span {
+            color: #081224 !important;
+            font-weight: 700 !important;
+        }
+        html.theme-light #supervision-group-view .grid .bg-navy\/50 [data-lucide],
+        html.theme-warm #supervision-group-view .grid .bg-navy\/50 [data-lucide] {
+            color: #4a1118 !important;
+        }
+
+        html.theme-light #certification-view .glass-panel,
+        html.theme-warm #certification-view .glass-panel {
+            background-color: #ffffff !important;
+            border: 1px solid #e2e8f0 !important;
+            border-top: 4px solid #4a1118 !important;
+            box-shadow: 0 6px 20px rgba(15, 23, 42, 0.05) !important;
+        }
+        html.theme-light #certification-view .glass-panel h5,
+        html.theme-warm #certification-view .glass-panel h5 {
+            color: #4a1118 !important;
+            font-weight: 700 !important;
+        }
+        html.theme-light #certification-view .glass-panel li,
+        html.theme-light #certification-view .glass-panel p,
+        html.theme-warm #certification-view .glass-panel li,
+        html.theme-warm #certification-view .glass-panel p {
+            color: #081224 !important;
+        }
+        html.theme-light #certification-view .rounded-full.border-copper,
+        html.theme-warm #certification-view .rounded-full.border-copper {
+            background-color: #081224 !important;
+            border-color: #4a1118 !important;
+            color: #ffffff !important;
+        }
+
+        /* Карточка преподавателя (Ирина Пингарёва) во всех курсах */
+        html.theme-light #course-detail-101-view .bg-navy\/80,
+        html.theme-light #course-detail-202-view .bg-navy\/80,
+        html.theme-light #supervision-group-view .bg-navy\/80,
+        html.theme-light #course-detail-wings-view .bg-navy\/80,
+        html.theme-light div:has(> div > img[data-img="irina"]),
+        html.theme-warm #course-detail-101-view .bg-navy\/80,
+        html.theme-warm #course-detail-202-view .bg-navy\/80,
+        html.theme-warm #supervision-group-view .bg-navy\/80,
+        html.theme-warm #course-detail-wings-view .bg-navy\/80,
+        html.theme-warm div:has(> div > img[data-img="irina"]) {
+            background-color: #ffffff !important;
+            border: 2px solid #4a1118 !important;
+            box-shadow: 0 12px 35px rgba(74, 17, 24, 0.08) !important;
+        }
+        html.theme-light img[data-img="irina"],
+        html.theme-warm img[data-img="irina"] {
+            border-color: #4a1118 !important;
+        }
+
+        /* 9. КАТАЛОГ ПСИХОЛОГОВ (psychologta-view) */
+        html.theme-light #psychologta-view .worn-burgundy,
+        html.theme-warm #psychologta-view .worn-burgundy {
+            background-color: #ffffff !important;
+            border: 1.5px solid rgba(74, 17, 24, 0.35) !important;
+            box-shadow: 0 8px 25px rgba(15, 23, 42, 0.05) !important;
+        }
+        html.theme-light #psychologta-view .worn-burgundy:hover,
+        html.theme-warm #psychologta-view .worn-burgundy:hover {
+            border-color: #4a1118 !important;
+            box-shadow: 0 12px 35px rgba(74, 17, 24, 0.1) !important;
+        }
+        html.theme-light #psychologta-view img,
+        html.theme-warm #psychologta-view img {
+            border-color: #4a1118 !important;
+        }
+        html.theme-light [data-psycholog-id] h4,
+        html.theme-warm [data-psycholog-id] h4 {
+            color: #4a1118 !important;
+            font-weight: 700 !important;
+        }
+        html.theme-light [data-psycholog-id] button,
+        html.theme-warm [data-psycholog-id] button {
+            background-color: #081224 !important;
+            color: #ffffff !important;
+            border: 1.5px solid #081224 !important;
+            font-weight: 700 !important;
+        }
+        html.theme-light [data-psycholog-id] button:hover,
+        html.theme-warm [data-psycholog-id] button:hover {
+            background-color: #4a1118 !important;
+            border-color: #4a1118 !important;
+            color: #ffffff !important;
+        }
+
+        /* 10. КАРТОЧКИ В РАЗДЕЛЕ «ВИДЫ ТА» */
+        html.theme-light #types-view .grid > div,
+        html.theme-warm #types-view .grid > div {
+            background-color: #ffffff !important;
+            border: 1.5px solid rgba(74, 17, 24, 0.35) !important;
+            box-shadow: 0 8px 25px rgba(15, 23, 42, 0.05) !important;
+        }
+        html.theme-light #types-view .grid > div:hover,
+        html.theme-warm #types-view .grid > div:hover {
+            border-color: #4a1118 !important;
+            transform: translateY(-2px);
+        }
+        html.theme-light #types-view .grid > div h3,
+        html.theme-warm #types-view .grid > div h3 {
+            color: #4a1118 !important;
+            font-weight: 700 !important;
+        }
+        html.theme-light #types-view .grid > div p,
+        html.theme-warm #types-view .grid > div p {
+            color: #081224 !important;
+            line-height: 1.6 !important;
+        }
+
+        /* 11. ПОДВАЛ САЙТА (FOOTER) */
+        html.theme-light footer,
+        html.theme-warm footer {
+            background-color: #f8fafc !important; /* свежий светлый фон */
+            border-top: 2.5px solid #4a1118 !important;
+            color: #081224 !important;
+        }
+        html.theme-light footer h1,
+        html.theme-warm footer h1 {
+            color: #4a1118 !important;
+            font-weight: 800 !important;
+        }
+        html.theme-light footer h4,
+        html.theme-warm footer h4 {
+            color: #4a1118 !important;
+            font-weight: 700 !important;
+        }
+        html.theme-light footer p,
+        html.theme-light footer .text-paper-dark,
+        html.theme-warm footer p,
+        html.theme-warm footer .text-paper-dark {
+            color: #081224 !important;
+        }
+        html.theme-light footer ul li,
+        html.theme-light footer ul li a,
+        html.theme-warm footer ul li,
+        html.theme-warm footer ul li a {
+            color: #081224 !important;
+            font-weight: 600 !important;
+        }
+        html.theme-light footer ul li a:hover,
+        html.theme-warm footer ul li a:hover {
+            color: #4a1118 !important;
+        }
+        html.theme-light footer [data-lucide],
+        html.theme-light footer svg,
+        html.theme-warm footer [data-lucide],
+        html.theme-warm footer svg {
+            color: #4a1118 !important;
+        }
+        html.theme-light footer .border-t,
+        html.theme-warm footer .border-t {
+            border-top-color: #e2e8f0 !important;
+        }
+
+        /* 12. ИНТЕРАКТИВНЫЙ БЛОК «А ЭТО ТОЧНО ФАКТ?» */
+        html.theme-light #fact-thought,
+        html.theme-warm #fact-thought {
+            color: #4a1118 !important;
+            font-weight: 700 !important;
+        }
+        html.theme-light #fact-buttons button,
+        html.theme-warm #fact-buttons button {
+            background-color: #ffffff !important;
+            border: 1.5px solid rgba(8, 18, 36, 0.3) !important;
+            color: #081224 !important;
+            font-weight: 600 !important;
+        }
+        html.theme-light #fact-buttons button:hover,
+        html.theme-warm #fact-buttons button:hover {
+            background-color: #4a1118 !important;
+            color: #ffffff !important;
+            border-color: #4a1118 !important;
+        }
+        html.theme-light #fact-buttons button:hover *,
+        html.theme-warm #fact-buttons button:hover * {
+            color: #ffffff !important;
+        }
+        html.theme-light #fact-explanation,
+        html.theme-warm #fact-explanation {
+            background-color: #f1f5f9 !important;
+            color: #081224 !important;
+            border-left: 4px solid #4a1118 !important;
+        }
+
+        /* 13. ПЛАШКИ НА ГЛАВНОМ ЭКРАНЕ (Hero: ТА-202 и Крыло) */
+        html.theme-light a.bg-navy\/90,
+        html.theme-light a.bg-navy,
+        html.theme-warm a.bg-navy\/90,
+        html.theme-warm a.bg-navy {
+            background-color: #ffffff !important;
+            border: 2px solid #4a1118 !important;
+            box-shadow: 0 4px 15px rgba(15, 23, 42, 0.06) !important;
+        }
+        html.theme-light a.bg-navy\/90:hover,
+        html.theme-light a.bg-navy:hover,
+        html.theme-warm a.bg-navy\/90:hover,
+        html.theme-warm a.bg-navy:hover {
+            border-color: #081224 !important;
+            box-shadow: 0 8px 25px rgba(15, 23, 42, 0.12) !important;
+        }
+        html.theme-light a.bg-navy\/90 .text-paper,
+        html.theme-light a.bg-navy .text-paper,
+        html.theme-warm a.bg-navy\/90 .text-paper,
+        html.theme-warm a.bg-navy .text-paper {
+            color: #081224 !important;
+            font-weight: 600 !important;
+        }
+        html.theme-light a.bg-navy\/90:hover .text-paper,
+        html.theme-light a.bg-navy:hover .text-paper,
+        html.theme-warm a.bg-navy\/90:hover .text-paper,
+        html.theme-warm a.bg-navy:hover .text-paper {
+            color: #4a1118 !important;
+        }
+        html.theme-light a.bg-navy\/90 .text-copper-bright,
+        html.theme-light a.bg-navy .text-copper-bright,
+        html.theme-warm a.bg-navy\/90 .text-copper-bright,
+        html.theme-warm a.bg-navy .text-copper-bright {
+            color: #4a1118 !important;
+            font-weight: 700 !important;
+        }
+        html.theme-light a.bg-navy\/90 .bg-copper,
+        html.theme-light a.bg-navy .bg-copper,
+        html.theme-warm a.bg-navy\/90 .bg-copper,
+        html.theme-warm a.bg-navy .bg-copper {
+            background-color: #4a1118 !important;
+            border: 1px solid #4a1118 !important;
+        }
+        html.theme-light a.bg-navy\/90 .bg-copper span,
+        html.theme-light a.bg-navy .bg-copper span,
+        html.theme-warm a.bg-navy\/90 .bg-copper span,
+        html.theme-warm a.bg-navy .bg-copper span {
+            color: #ffffff !important;
+            font-weight: 700 !important;
+        }
+        html.theme-light a.bg-navy\/90 .bg-burgundy,
+        html.theme-light a.bg-navy .bg-burgundy,
+        html.theme-warm a.bg-navy\/90 .bg-burgundy,
+        html.theme-warm a.bg-navy .bg-burgundy {
+            background-color: #081224 !important;
+            border: 1px solid #081224 !important;
+        }
+        html.theme-light a.bg-navy\/90 .bg-burgundy span,
+        html.theme-light a.bg-navy .bg-burgundy span,
+        html.theme-warm a.bg-navy\/90 .bg-burgundy span,
+        html.theme-warm a.bg-navy .bg-burgundy span {
+            color: #ffffff !important;
+            font-weight: 700 !important;
+        }
+
+        /* 14. ОСНОВНЫЕ КНОПКИ ДЕЙСТВИЯ */
+        html.theme-light .bg-copper:not(a.bg-navy\/90 .bg-copper),
+        html.theme-warm .bg-copper:not(a.bg-navy\/90 .bg-copper) {
+            background-color: #4a1118 !important;
+            color: #ffffff !important;
+            border: 1.5px solid #4a1118 !important;
+            box-shadow: 0 4px 15px rgba(74, 17, 24, 0.25) !important;
+        }
+        html.theme-light .bg-copper:not(a.bg-navy\/90 .bg-copper):hover,
+        html.theme-warm .bg-copper:not(a.bg-navy\/90 .bg-copper):hover {
+            background-color: #081224 !important;
+            border-color: #081224 !important;
+        }
+        html.theme-light .bg-copper:not(a.bg-navy\/90 .bg-copper) *,
+        html.theme-warm .bg-copper:not(a.bg-navy\/90 .bg-copper) * {
+            color: #ffffff !important;
+        }
+
+        html.theme-light .bg-burgundy:not(a.bg-navy\/90 .bg-burgundy),
+        html.theme-warm .bg-burgundy:not(a.bg-navy\/90 .bg-burgundy) {
+            background-color: #081224 !important;
+            color: #ffffff !important;
+            border: 1.5px solid #081224 !important;
+        }
+        html.theme-light .bg-burgundy:not(a.bg-navy\/90 .bg-burgundy):hover,
+        html.theme-warm .bg-burgundy:not(a.bg-navy\/90 .bg-burgundy):hover {
+            background-color: #4a1118 !important;
+            border-color: #4a1118 !important;
+        }
+        html.theme-light .bg-burgundy:not(a.bg-navy\/90 .bg-burgundy) *,
+        html.theme-warm .bg-burgundy:not(a.bg-navy\/90 .bg-burgundy) * {
+            color: #ffffff !important;
+        }
+
+        /* Поля ввода и поиска */
+        html.theme-light input,
+        html.theme-light textarea,
+        html.theme-light select,
+        html.theme-warm input,
+        html.theme-warm textarea,
+        html.theme-warm select {
+            background-color: #ffffff !important;
+            color: #081224 !important;
+            border: 1px solid #cbd5e1 !important;
+        }
+
+        /* Баннер Cookie */
+        html.theme-light #cookie-banner,
+        html.theme-warm #cookie-banner {
+            background-color: #ffffff !important;
+            border-top: 2.5px solid #4a1118 !important;
+            color: #081224 !important;
+            box-shadow: 0 -10px 30px rgba(15, 23, 42, 0.1) !important;
+        }
+        html.theme-light #cookie-banner p,
+        html.theme-warm #cookie-banner p { color: #081224 !important; }
+        html.theme-light #cookie-banner a,
+        html.theme-warm #cookie-banner a { color: #4a1118 !important; font-weight: 700 !important; }
+
+        /* Модалка поглаживаний */
+        html.theme-light #stroke-modal,
+        html.theme-warm #stroke-modal {
+            background-color: rgba(15, 23, 42, 0.65) !important;
+        }
+        html.theme-light #stroke-modal .worn-burgundy,
+        html.theme-warm #stroke-modal .worn-burgundy {
+            background-color: #ffffff !important;
+            border: 2px solid #4a1118 !important;
+            box-shadow: 0 20px 50px rgba(15, 23, 42, 0.2) !important;
+        }
+        html.theme-light #stroke-modal #stroke-quote,
+        html.theme-warm #stroke-modal #stroke-quote {
+            color: #4a1118 !important;
+        }
+
+        /* Отключение ночных темных искр */
+        html.theme-light #sparks-canvas,
+        html.theme-warm #sparks-canvas {
+            display: none !important;
+        }
+
+        /* Кнопка переключения темы */
+        .theme-toggle-btn {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 42px;
+            height: 42px;
+            border-radius: 9999px;
+            border: 1.5px solid rgba(179, 106, 40, 0.4);
+            background: rgba(18, 32, 58, 0.7);
+            color: #d48c44;
+            cursor: pointer;
+            transition: all 0.25s ease-in-out;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        .theme-toggle-btn:hover {
+            transform: scale(1.08);
+            border-color: #d48c44;
+            color: #fdfbf7;
+            box-shadow: 0 0 15px rgba(212, 140, 68, 0.4);
+        }
+        html.theme-light .theme-toggle-btn,
+        html.theme-warm .theme-toggle-btn {
+            background: #ffffff !important;
+            border: 1.5px solid #4a1118 !important;
+            color: #4a1118 !important;
+            box-shadow: 0 2px 10px rgba(74, 17, 24, 0.12) !important;
+        }
+        html.theme-light .theme-toggle-btn:hover,
+        html.theme-warm .theme-toggle-btn:hover {
+            background: #f1f5f9 !important;
+            color: #081224 !important;
+            border-color: #081224 !important;
+        }
+
+        /* Плашка-подсказка выбора темы */
+        #theme-hint-desktop {
+            animation: hintFloat 2.5s infinite ease-in-out;
+        }
+        @keyframes hintFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(4px); }
+        }
+        html.theme-light #theme-hint-desktop,
+        html.theme-warm #theme-hint-desktop {
+            background-color: #081224 !important;
+            border-color: #4a1118 !important;
+            color: #ffffff !important;
+        }
+        html.theme-light #theme-hint-desktop > div,
+        html.theme-warm #theme-hint-desktop > div {
+            background-color: #081224 !important;
+            border-color: #4a1118 !important;
+        }
+</style>
 
     <!-- Meta Pixel Code -->
     <script>
@@ -90,6 +908,108 @@
       gtag('js', new Date());
 
       gtag('config', 'G-1JQVTE5JF8');
+    </script>
+
+<script>
+        // ==========================================
+        // Theme System: Default Clean LIGHT Theme & Dark Mode
+        // ==========================================
+        function initTheme() {
+            // Force default to 'dark' as explicitly requested
+            if (localStorage.getItem('kita-theme-v5') !== '1') {
+                localStorage.setItem('kita-theme', 'dark');
+                localStorage.setItem('kita-theme-v5', '1');
+            }
+            const savedTheme = localStorage.getItem('kita-theme') || 'dark';
+            applyTheme(savedTheme);
+        }
+
+        function applyTheme(theme) {
+            const isLight = (theme === 'light' || theme === 'warm');
+            if (isLight) {
+                document.documentElement.classList.add('theme-light');
+                document.documentElement.classList.add('theme-warm');
+                document.documentElement.classList.remove('dark');
+            } else {
+                document.documentElement.classList.remove('theme-light');
+                document.documentElement.classList.remove('theme-warm');
+                document.documentElement.classList.add('dark');
+            }
+            localStorage.setItem('kita-theme', isLight ? 'light' : 'dark');
+            updateThemeIcons(isLight);
+        }
+
+        function toggleTheme() {
+            const currentTheme = localStorage.getItem('kita-theme') || 'light';
+            const newTheme = (currentTheme === 'light' || currentTheme === 'warm') ? 'dark' : 'light';
+            applyTheme(newTheme);
+            dismissThemeHint();
+            if (typeof showToast === 'function') {
+                showToast(newTheme === 'light' ? '☀️ Светлая тема включена' : '🌙 Тёмная тема включена');
+            }
+        }
+
+        function dismissThemeHint(e) {
+            if (e) e.stopPropagation();
+            const hint = document.getElementById('theme-hint-desktop');
+            if (hint) {
+                hint.style.opacity = '0';
+                hint.style.transform = 'translateY(-6px)';
+                hint.style.transition = 'all 0.3s ease';
+                setTimeout(() => { if (hint) hint.remove(); }, 320);
+            }
+            try { localStorage.setItem('kita-theme-hint-dismissed', '1'); } catch(err) {}
+        }
+
+        function updateThemeIcons(isLight) {
+            const sunDesktop = document.getElementById('theme-icon-sun');
+            const moonDesktop = document.getElementById('theme-icon-moon');
+            const sunMobile = document.getElementById('theme-icon-sun-mob');
+            const moonMobile = document.getElementById('theme-icon-moon-mob');
+
+            // In light mode: show Moon icon (clicking switches to Dark)
+            // In dark mode: show Sun icon (clicking switches to Light)
+            if (sunDesktop && moonDesktop) {
+                if (isLight) {
+                    sunDesktop.classList.add('hidden');
+                    moonDesktop.classList.remove('hidden');
+                } else {
+                    sunDesktop.classList.remove('hidden');
+                    moonDesktop.classList.add('hidden');
+                }
+            }
+
+            if (sunMobile && moonMobile) {
+                if (isLight) {
+                    sunMobile.classList.add('hidden');
+                    moonMobile.classList.remove('hidden');
+                } else {
+                    sunMobile.classList.remove('hidden');
+                    moonMobile.classList.add('hidden');
+                }
+            }
+
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        }
+
+        // Initialize immediately with LIGHT theme
+        initTheme();
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('kita-theme') || 'dark';
+            updateThemeIcons(savedTheme === 'light' || savedTheme === 'warm');
+        });
+
+        window.addEventListener('DOMContentLoaded', () => {
+            if (localStorage.getItem('kita-theme-hint-dismissed') === '1') {
+                const hint = document.getElementById('theme-hint-desktop');
+                if (hint) hint.remove();
+            }
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        });
     </script>
 </head>
 <body class="font-serif min-h-screen flex flex-col text-lg">
@@ -157,9 +1077,31 @@
 
                 <div class="hidden lg:flex items-center space-x-4 shrink-0 relative z-10">
                     <div class="relative flex items-center"><span class="absolute -top-3 left-4 text-[#c22941] drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] font-handwriting text-base rotate-[-12deg] pointer-events-none select-none z-20">Скоро</span><span class="text-copper-bright/30 font-medium flex items-center text-base cursor-not-allowed"><i data-lucide="user" class="mr-2 h-5 w-5"></i> Кабинет</span></div>
+                                        
+<div class="relative flex items-center">
+                        <button id="theme-toggle-desktop" onclick="toggleTheme()" class="theme-toggle-btn shrink-0" title="Переключить тему (Светлая / Тёмная)" aria-label="Переключить тему">
+                            <i data-lucide="sun" id="theme-icon-sun" class="h-5 w-5"></i>
+                            <i data-lucide="moon" id="theme-icon-moon" class="h-5 w-5 hidden"></i>
+                        </button>
+                        
+                        <!-- Плашка-подсказка выбора темы -->
+                        <div id="theme-hint-desktop" class="absolute top-full mt-3 right-0 z-50 flex items-center gap-2 px-3.5 py-2 rounded-lg bg-[#4a1118] text-white border border-[#d48c44] shadow-[0_10px_25px_rgba(0,0,0,0.6)] text-xs whitespace-nowrap cursor-pointer" onclick="toggleTheme()">
+                            <span class="text-sm">✨</span>
+                            <span class="font-medium">Здесь вы можете выбрать тему</span>
+                            <button onclick="dismissThemeHint(event)" class="ml-1 text-white/70 hover:text-white p-0.5" title="Закрыть"><i data-lucide="x" class="h-3.5 w-3.5"></i></button>
+                            <div class="absolute -top-1.5 right-4 w-3 h-3 bg-[#4a1118] border-t border-l border-[#d48c44] rotate-45"></div>
+                        </div>
+                    </div>
                     <a href="https://wa.link/uulpcl" target="_blank" class="inline-block bg-burgundy text-paper-light border border-copper/50 font-bold px-5 py-2 rounded-full hover:bg-copper-dark transition-all text-base shadow-[0_0_15px_rgba(179,106,40,0.2)]">Поступить</a>
                 </div>
-                <div class="xl:hidden flex items-center relative z-10"><button id="mobile-menu-btn" class="text-copper hover:text-copper-bright focus:outline-none"><i data-lucide="menu" id="menu-icon" class="h-8 w-8"></i></button></div>
+                <div class="xl:hidden flex items-center space-x-3 relative z-10">
+                    
+                    <button id="theme-toggle-mobile" onclick="toggleTheme()" class="theme-toggle-btn !w-9 !h-9" title="Переключить тему (Светлая / Тёмная)" aria-label="Переключить тему">
+                        <i data-lucide="sun" id="theme-icon-sun-mob" class="h-4 w-4"></i>
+                        <i data-lucide="moon" id="theme-icon-moon-mob" class="h-4 w-4 hidden"></i>
+                    </button>
+                    <button id="mobile-menu-btn" class="text-copper hover:text-copper-bright focus:outline-none"><i data-lucide="menu" id="menu-icon" class="h-8 w-8"></i></button>
+                </div>
             </div>
         </div>
 
@@ -251,7 +1193,7 @@
                                     <span class="text-xl font-bold leading-none mt-0.5">20</span>
                                 </div>
                                 <div class="flex-grow">
-                                    <div class="text-copper-bright text-xs font-bold uppercase tracking-wider mb-0.5">Старт курса</div>
+                                    <div class="text-copper-bright text-xs font-bold uppercase tracking-wider mb-0.5">Набор на курс</div>
                                     <div class="text-paper text-base sm:text-lg font-semibold group-hover:text-copper-bright transition-colors flex items-center gap-2">
                                         <span>ТА-202. Практика с первого курса</span>
                                         <i data-lucide="arrow-right" class="h-4 w-4 text-copper-bright group-hover:translate-x-1 transition-transform"></i>
@@ -261,13 +1203,13 @@
                         </div>
                         <!-- Wings Promo Plaque -->
                         <div class="mt-4">
-                            <a href="#" onclick="showPage('course-detail-wings-view'); return false;" class="inline-flex items-center gap-4 bg-navy/90 hover:bg-navy border border-copper/50 p-4 sm:p-5 rounded-sm shadow-xl transition-all group hover:border-copper-bright hover:shadow-[0_0_25px_rgba(179,106,40,0.35)] text-left cursor-pointer w-full ">
+                            <a href="#" onclick="showPage('course-detail-wings-view'); return false;" class="inline-flex items-center gap-4 bg-navy/90 hover:bg-navy border border-copper/50 p-4 sm:p-5 rounded-sm shadow-xl transition-all group hover:border-copper-bright hover:shadow-[0_0_25px_rgba(179,106,40,0.35)] text-left cursor-pointer w-full">
                                 <div class="w-14 h-14 rounded-sm bg-copper border border-copper-bright flex flex-col items-center justify-center shrink-0 shadow-inner group-hover:scale-105 transition-transform">
                                     <span class="text-navy text-[10px] font-bold tracking-widest uppercase opacity-80">НОЯБРЬ</span>
                                     <span class="text-navy text-xl font-black leading-none mt-0.5">27</span>
                                 </div>
-                                <div>
-                                    <p class="text-copper-bright text-xs font-bold tracking-widest uppercase mb-1">СТАРТ</p>
+                                <div class="flex-grow">
+                                    <div class="text-copper-bright text-xs font-bold uppercase tracking-wider mb-0.5">Набор на курс</div>
                                     <div class="text-paper text-base sm:text-lg font-semibold group-hover:text-copper-bright transition-colors flex items-center gap-2">
                                         <span>Мастерская «На крыло»</span>
                                         <i data-lucide="arrow-right" class="h-4 w-4 text-copper-bright group-hover:translate-x-1 transition-transform"></i>
@@ -1641,16 +2583,16 @@
                             </div>
 
                             <div class="glass-panel p-8 rounded-sm border-t-2 border-copper mb-12">
-                                <h5 class="text-xl font-bold text-copper-bright mb-4 flex items-center"><i data-lucide="star" class="mr-3 h-5 w-5"></i> Бонусы и специальные условия</h5>
+                                <h5 class="text-xl font-bold text-copper-bright mb-4 flex items-center"><i data-lucide="credit-card" class="mr-3 h-5 w-5"></i> Стоимость и условия обучения</h5>
                                 <div class="space-y-4 text-paper/90 font-light text-lg">
-                                    <p><strong>Система скидок:</strong> разработана обширная система скидок: при раннем бронировании, для студента 101-го курса КИТА, для действующих членов АлмАТА и многое другое.</p>
+                                    <p><strong>Стоимость одного модуля:</strong> <span class="font-bold text-copper-bright">120 000 тг</span>. Есть рассрочка, можете оплачивать также помодульно или помесячно — как вам удобно.</p>
                                     <p><strong>Особый бонус для студентов:</strong> Вы получаете возможность разместить своё профессиональное портфолио на сайте КИТА. Мы активно помогаем нашим выпускникам находить новых клиентов и развивать успешную частную практику!</p>
                                 </div>
                             
                                     <div class="mt-6">
                                         <a href="https://wa.me/77066077197" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 bg-copper text-navy hover:bg-copper-bright rounded-full transition-colors font-bold shadow-lg">
                                             <i data-lucide="message-circle" class="h-5 w-5"></i>
-                                            Узнать подробнее про скидки
+                                            Узнать подробнее об оплате и рассрочке
                                         </a>
                                     </div>
                                 </div>
@@ -1807,7 +2749,7 @@
                     </div>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"><div class="bg-navy/80 rounded-sm border border-copper/30 shadow-xl overflow-hidden flex flex-col hover:border-copper transition-all group p-8 relative"><i data-lucide="feather" class="absolute top-4 right-4 h-24 w-24 text-copper/5 transform rotate-12 pointer-events-none"></i><div class="relative z-10 flex-grow flex flex-col"><div class="inline-block px-3 py-1 rounded-full bg-copper/20 text-copper-bright text-xs font-bold tracking-widest uppercase mb-6 border border-copper/30 self-start">Продвинутым</div><h3 class="text-2xl font-bold text-paper leading-tight drop-shadow-md mb-4">Мастерская «На крыло»</h3><p class="text-paper/80 font-light text-sm mb-6 flex-grow">Мастерская для тех, кто готов взлететь в своей практике и выйти на новый уровень профессионального мастерства.</p><div class="space-y-2 text-sm font-light text-paper mb-8 border-t border-copper/10 pt-4"><p><span class="text-copper font-medium">Преподаватель:</span> Ирина Пингарёва</p><p><span class="text-copper font-medium">Статус:</span> Открыт набор</p><p><span class="text-copper font-medium">Статус:</span> Открыт набор</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"><div class="bg-navy/80 rounded-sm border border-copper/30 shadow-xl overflow-hidden flex flex-col hover:border-copper transition-all group p-8 relative"><i data-lucide="feather" class="absolute top-4 right-4 h-24 w-24 text-copper/5 transform rotate-12 pointer-events-none"></i><div class="relative z-10 flex-grow flex flex-col"><div class="inline-block px-3 py-1 rounded-full bg-copper/20 text-copper-bright text-xs font-bold tracking-widest uppercase mb-6 border border-copper/30 self-start">Продвинутым</div><h3 class="text-2xl font-bold text-paper leading-tight drop-shadow-md mb-4">Мастерская «На крыло»</h3><p class="text-paper/80 font-light text-sm mb-6 flex-grow">Мастерская для тех, кто готов взлететь в своей практике и выйти на новый уровень профессионального мастерства.</p><div class="space-y-2 text-sm font-light text-paper mb-8 border-t border-copper/10 pt-4"><p><span class="text-copper font-medium">Преподаватель:</span> Ирина Пингарёва</p><p><span class="text-copper font-medium">Статус:</span> Открыт набор</p>
 </div><button onclick="showPage('course-detail-wings-view')" class="mt-auto w-full bg-navy border border-copper text-copper-bright hover:bg-copper hover:text-navy font-bold py-4 rounded-sm transition-all shadow-md flex justify-center items-center gap-2">Узнать больше</button></div></div>
 <div class="worn-burgundy rounded-sm border border-copper/30 shadow-xl overflow-hidden flex flex-col hover:border-copper transition-all group p-8 relative">
                         <div class="relative z-10 flex-grow flex flex-col">
